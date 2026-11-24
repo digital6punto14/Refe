@@ -38,6 +38,7 @@
       "options": { "activate": true, "targetFolderName": "refe-contenuti" },
       "ifAlreadyInstalled": "skip"
     },
+    { "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; require_once ABSPATH . 'wp-admin/includes/file.php'; delete_plugins( array_values( array_filter( array( 'akismet/akismet.php', 'hello.php' ), static fn( $p ) => file_exists( WP_PLUGIN_DIR . '/' . $p ) ) ) );" },
     {
       "step": "runPHP",
       "code": "<?php require '/wordpress/wp-load.php'; wp_set_current_user( 1 ); if ( function_exists( 'refe_contenuti_importa' ) ) { refe_contenuti_importa(); } flush_rewrite_rules();"
