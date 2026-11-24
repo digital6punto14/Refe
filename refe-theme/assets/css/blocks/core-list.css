@@ -1,0 +1,10 @@
+.wp-block-list li + li { margin-top: 0; }
+.is-style-voci-menu, .is-style-elenco-footer { list-style: none; }
+.is-style-voci-menu { display: flex; flex-direction: column; gap: 5px; }
+.is-style-voci-menu a { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 3px 0; font-size: 17px; line-height: 1.3; text-decoration: none; text-transform: uppercase; }
+.is-style-voci-menu a::after { content: ""; flex: none; width: 20px; height: 16px; background: #ff8745; mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(135deg); }
+.is-style-voci-menu a:is(:hover, [aria-current]) { color: #ff8e4f; }
+.is-style-elenco-footer a { display: block; padding: 6px 0; font-size: 16px; line-height: 20px; text-transform: uppercase; text-decoration: none; }
+.is-style-elenco-footer a:hover { color: #ff9561; }
+.is-style-elenco-footer a[aria-current] { color: var(--wp--preset--color--solar-ember); }
+@media (max-width: 800px) { .is-style-voci-menu a { font-size: 16px; padding: 5px 0; text-transform: none; } .is-style-elenco-footer a { font-size: 14px; } }

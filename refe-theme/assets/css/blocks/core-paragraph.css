@@ -1,0 +1,4 @@
+.is-style-nota { width: fit-content; opacity: .8; }
+.is-style-etichetta { width: fit-content; }
+.is-style-freccia { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+.is-style-freccia::after { content: ""; flex: none; width: 20px; height: 16px; background: var(--wp--preset--color--solar-ember); mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(135deg); }

@@ -1,0 +1,33 @@
+/* Base del tema: margini, variabili condivise, focus, parola chiave. Il resto è in theme.json e nei CSS per blocco. */
+:root {
+  --refe-margine: max(6.3vw, calc((100vw - 1320px) / 2));
+  --refe-grana: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.10'/%3E%3C/svg%3E");
+  --refe-grana-chiara: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+  --refe-freccia: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' overflow='visible' style='display: block;' width='29.08' height='23.54' viewBox='0 0 29.08 23.54' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg id='Group'%3E %3Cpath id='Vector' d='M11.78 1.5L1.5 11.77L11.78 22.04' stroke='%23DCE3EC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E %3Cpath id='Vector_2' d='M27.58 11.77H2.29' stroke='%23DCE3EC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/g%3E %3C/svg%3E");
+  --refe-simbolo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='48' viewBox='0 0 53 48' fill='none'%3E%3Cpath d='M49.9565 45.7519L36.2749 18.5095C35.757 17.4798 36.5096 16.268 37.6669 16.268H43.8756C48.3865 16.268 52.0444 12.626 52.0444 8.13473C52.0444 3.64349 48.3865 0.00151346 43.8756 0.00151346H29.3281C28.9089 0.00151346 28.569 0.339927 28.569 0.757305L33.6949 13.4253C33.8277 13.804 33.6723 14.2584 33.2952 14.3986C33.109 14.4679 32.8921 14.4663 32.6898 14.3664L4.17585 0.17072C2.83731 -0.496439 1.41947 0.916843 2.08793 2.24794L16.3457 30.6393C16.4461 30.8407 16.4493 31.055 16.3781 31.242C16.2357 31.6174 15.7808 31.7738 15.4005 31.64L0.759099 26.5364C0.339895 26.5364 0 26.8748 0 27.2922V46.44C0 47.2957 0.695976 47.9886 1.55542 47.9886H16.6986C17.558 47.9886 18.254 47.2957 18.254 46.44V35.5946C18.254 34.4424 19.4711 33.6947 20.5054 34.2087L47.8669 47.8307C49.2039 48.4963 50.6233 47.0846 49.9549 45.7519H49.9565Z' fill='%23F94A00'%3E%3C/path%3E%3C/svg%3E");
+  --refe-vetro: linear-gradient(135deg, #ffffff5c, #e1eeff18 45%, #bed7f540), rgb(220 234 251 / .38);
+  --refe-vetro-forte: linear-gradient(135deg, #ffffffb3, #e1eeff80 45%, #bed7f59e), rgb(220 234 251 / .5);
+  --refe-vetro-bordo: rgb(255 255 255 / .7);
+  --refe-vetro-ombra: inset 0 1px 0 #ffffffe6, inset 0 -1px 0 #ffffff38, 0 8px 24px #021e4226;
+  --refe-vetro-scuro: linear-gradient(125deg, #5a8fd54d, #021e4226), rgb(2 30 66 / .42);
+  --refe-vetro-scuro-bordo: #c8ddf652;
+  --refe-vetro-scuro-ombra: inset 0 1px 0 #ffffff2b, 0 16px 36px #021e4229;
+  --refe-chiave: var(--wp--preset--color--solar-ember);
+}
+@media (max-width: 800px) { :root { --refe-margine: 24px; } }
+@media (max-width: 510px) { :root { --refe-margine: 20px; } }
+html { scroll-behavior: smooth; scroll-padding-top: 112px; scrollbar-width: none; background: var(--wp--preset--color--midnight-moon); }
+html::-webkit-scrollbar { display: none; }
+body { overflow-x: clip; }
+/* La testata è fissa e sta sopra la prima sezione; le sezioni si toccano. */
+.wp-site-blocks > * + *, main.wp-block-group > * + *, .wp-block-post-content.is-layout-flow > * + *, .wp-block-post-content.is-layout-constrained > * + *, .wp-block-post-content > * + .alignfull { margin-block-start: 0; }
+:where(h1, h2, h3, h4) { text-wrap: balance; overflow-wrap: break-word; }
+:where(p, li) { text-wrap: pretty; }
+/* Parola chiave del titolo: corsivo nell'editor, arancione e in grassetto sul sito. */
+:is(h1, h2, h3) em { font-style: normal; font-weight: 700; color: var(--refe-chiave); }
+:is(a, button, summary, input, select, textarea, [tabindex]):focus-visible { outline: 3px solid var(--wp--preset--color--solar-ember); outline-offset: 4px; }
+.skip-link.screen-reader-text:focus { z-index: 2000; background: var(--wp--preset--color--white); color: var(--wp--preset--color--midnight-moon); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}

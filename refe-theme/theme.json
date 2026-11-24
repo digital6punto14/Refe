@@ -1,5 +1,139 @@
 {
   "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
   "version": 3,
-  "settings": { "appearanceTools": true, "useRootPaddingAwareAlignments": true, "layout": { "contentSize": "780px", "wideSize": "1260px" } }
+  "title": "Refe",
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": true,
+    "viewport": { "mobile": "510px", "tablet": "800px" },
+    "layout": { "contentSize": "1320px", "wideSize": "1320px" },
+    "background": { "backgroundImage": true, "backgroundSize": true },
+    "border": {
+      "radiusSizes": [
+        { "slug": "pulsante", "name": "Pulsante", "size": "10px" },
+        { "slug": "scheda", "name": "Scheda", "size": "16px" },
+        { "slug": "pillola", "name": "Pillola", "size": "32px" }
+      ]
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "defaultDuotone": false,
+      "palette": [
+        { "slug": "solar-ember", "name": "Solar Ember", "color": "#f95700" },
+        { "slug": "midnight-moon", "name": "Midnight Moon", "color": "#021e42" },
+        { "slug": "bright-blue", "name": "Bright Blue", "color": "#003087" },
+        { "slug": "white-blue", "name": "White Blue", "color": "#dce3ec" },
+        { "slug": "white-blue-light", "name": "White Blue Light", "color": "#e7edf6" },
+        { "slug": "white", "name": "White", "color": "#ffffff" },
+        { "slug": "midnight-moon-light", "name": "Midnight Moon Light", "color": "#0b2657" },
+        { "slug": "bright-blue-light", "name": "Bright Blue Light", "color": "#0042b2" },
+        { "slug": "bright-blue-dark", "name": "Bright Blue Dark", "color": "#074081" },
+        { "slug": "bright-blue-vivid", "name": "Bright Blue Vivid", "color": "#0051d7" },
+        { "slug": "bright-blue-pale", "name": "Bright Blue Pale", "color": "#9ec1ff" },
+        { "slug": "solar-ember-light", "name": "Solar Ember Light", "color": "#ff7b33" },
+        { "slug": "solar-ember-bright", "name": "Solar Ember Bright", "color": "#ff6a1d" },
+        { "slug": "solar-ember-dark", "name": "Solar Ember Dark", "color": "#a43600" },
+        { "slug": "solar-ember-extra-dark", "name": "Solar Ember Extra Dark", "color": "#4c1400" },
+        { "slug": "solar-ember-pale", "name": "Solar Ember Pale", "color": "#fff3ec" }
+      ],
+      "gradients": [
+        { "slug": "errore", "name": "Pagina 404", "gradient": "linear-gradient(180deg,#ffd7c1 6%,#a43600 100%)" },
+        { "slug": "velo-testata", "name": "Velo testata", "gradient": "linear-gradient(90deg,rgba(2,30,66,0.9) 0%,rgba(2,30,66,0.55) 55%,rgba(0,48,135,0.28) 100%)" },
+        { "slug": "velo-fascia", "name": "Velo fascia", "gradient": "linear-gradient(180deg,rgba(2,30,66,0.15) 0%,rgba(2,30,66,0.55) 100%)" },
+        { "slug": "blu-notte", "name": "Bright Blue verso Midnight Moon", "gradient": "linear-gradient(180deg,#003087 0%,#021e42 100%)" }
+      ]
+    },
+    "shadow": {
+      "defaultPresets": false,
+      "presets": [
+        { "slug": "scheda", "name": "Scheda", "shadow": "1px 2px 3px rgba(0,0,0,0.1)" },
+        { "slug": "vetro", "name": "Vetro", "shadow": "0 8px 24px rgba(2,30,66,0.15)" }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "em", "%", "vw", "svh"],
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        { "slug": "minima", "name": "Minima", "size": "8px" },
+        { "slug": "piccola", "name": "Piccola", "size": "16px" },
+        { "slug": "media", "name": "Media", "size": "24px" },
+        { "slug": "grande", "name": "Grande", "size": "48px" },
+        { "slug": "molto-grande", "name": "Molto grande", "size": "64px" },
+        { "slug": "sezione", "name": "Sezione", "size": "clamp(64px, 7vw, 100px)" }
+      ]
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fluid": false,
+      "customFontSize": true,
+      "fontFamilies": [
+        {
+          "slug": "dm-sans",
+          "name": "DM Sans",
+          "fontFamily": "'DM Sans', sans-serif",
+          "fontFace": [
+            { "fontFamily": "DM Sans", "fontStyle": "normal", "fontWeight": "100 1000", "fontDisplay": "swap", "src": ["file:./assets/fonts/dm-sans.woff2"] }
+          ]
+        },
+        { "slug": "sistema", "name": "Font di sistema", "fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" }
+      ],
+      "fontSizes": [
+        { "slug": "etichetta", "name": "Etichetta", "size": "14px" },
+        { "slug": "testo", "name": "Testo", "size": "17px" },
+        { "slug": "lettura", "name": "Lettura", "size": "18px" },
+        { "slug": "sommario", "name": "Sommario", "size": "clamp(17px, 1.5vw, 21px)" },
+        { "slug": "introduzione", "name": "Introduzione", "size": "clamp(21px, 2vw, 28px)" },
+        { "slug": "piccolo", "name": "Titolo piccolo", "size": "21px" },
+        { "slug": "medio", "name": "Titolo medio", "size": "clamp(30px, 3vw, 50px)" },
+        { "slug": "grande", "name": "Titolo grande", "size": "clamp(36px, 4.6vw, 68px)" },
+        { "slug": "molto-grande", "name": "Titolo molto grande", "size": "clamp(40px, 5.6vw, 84px)" },
+        { "slug": "copertina", "name": "Titolo copertina", "size": "clamp(37px, 5.7vw, 90px)" }
+      ]
+    },
+    "custom": {
+      "ritmo": "cubic-bezier(.2,.7,.2,1)",
+      "spazio": { "xs": "4px", "md": "12px", "xl": "32px", "4xl": "96px" }
+    },
+    "blocks": {
+      "core/button": { "color": { "gradients": [] } }
+    }
+  },
+  "styles": {
+    "color": { "background": "var:preset|color|midnight-moon", "text": "var:preset|color|white" },
+    "spacing": { "blockGap": "18px", "padding": { "top": "0px", "bottom": "0px", "left": "var(--refe-margine, 20px)", "right": "var(--refe-margine, 20px)" } },
+    "typography": { "fontFamily": "var:preset|font-family|dm-sans", "fontSize": "var:preset|font-size|testo", "fontWeight": "400", "lineHeight": "1.55" },
+    "elements": {
+      "h1": { "typography": { "fontSize": "var:preset|font-size|molto-grande", "fontWeight": "700", "lineHeight": "1.02", "letterSpacing": "-0.035em" } },
+      "h2": { "typography": { "fontSize": "var:preset|font-size|medio", "fontWeight": "400", "lineHeight": "1.12", "letterSpacing": "-0.02em" } },
+      "h3": { "typography": { "fontSize": "var:preset|font-size|piccolo", "fontWeight": "700", "lineHeight": "1.2", "letterSpacing": "-0.01em" } },
+      "h4": { "typography": { "fontSize": "var:preset|font-size|lettura", "fontWeight": "700", "lineHeight": "1.25" } },
+      "link": { "color": { "text": "inherit" }, "typography": { "textDecoration": "underline" } },
+      "button": {
+        "color": { "background": "var:preset|color|solar-ember", "text": "var:preset|color|white" },
+        "border": { "radius": "10px", "width": "0px" },
+        "spacing": { "padding": { "top": "12px", "bottom": "12px", "left": "20px", "right": "20px" } },
+        "typography": { "fontSize": "14px", "fontWeight": "500", "lineHeight": "22px", "textTransform": "uppercase", "textDecoration": "none" },
+        ":hover": { "color": { "background": "var:preset|color|solar-ember-bright", "text": "var:preset|color|white" } }
+      },
+      "caption": { "typography": { "fontSize": "var:preset|font-size|etichetta" } }
+    },
+    "blocks": {
+      "core/accordion": { "spacing": { "blockGap": "10px" } },
+      "core/buttons": { "spacing": { "blockGap": "12px" } },
+      "core/columns": { "spacing": { "blockGap": { "left": "clamp(28px, 5vw, 72px)", "top": "28px" } } },
+      "core/list": { "spacing": { "padding": { "left": "1.1em" } } },
+      "core/navigation": { "typography": { "fontSize": "15px", "fontWeight": "500", "textTransform": "uppercase", "lineHeight": "16px" }, "elements": { "link": { "typography": { "textDecoration": "none" } } } },
+      "core/post-title": { "elements": { "link": { "typography": { "textDecoration": "none" } } } },
+      "core/group": { "@tablet": { "spacing": { "blockGap": "18px" } } }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Testata del sito", "area": "header" },
+    { "name": "header-ridotta", "title": "Testata ridotta (404)", "area": "header" },
+    { "name": "footer", "title": "Piè di pagina", "area": "footer" }
+  ],
+  "customTemplates": [
+    { "name": "pagina-indice", "title": "Pagina con indice", "postTypes": ["page"] }
+  ]
 }

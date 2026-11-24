@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 165.86 192.62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #002a7a;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-4 {
+        fill: #0a1c39;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #d8dfe9;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <circle class="cls-6" cx="23.91" cy="23.91" r="23.91"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <circle class="cls-4" cx="141.95" cy="87.16" r="23.91"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <circle class="cls-6" cx="23.91" cy="151.04" r="23.91"/>
+    </clipPath>
+  </defs>
+  <g id="Livello_1-2" data-name="Livello 1">
+    <g>
+      <g>
+        <g>
+          <circle class="cls-6" cx="23.91" cy="23.91" r="23.91"/>
+          <g class="cls-7">
+            <ellipse class="cls-1" cx="23.91" cy="47.1" rx="15.98" ry="17.4"/>
+            <circle class="cls-5" cx="23.91" cy="17.76" r="8.8"/>
+          </g>
+        </g>
+        <path class="cls-6" d="M158.65,0h-92.04c-3.98,0-7.21,3.23-7.21,7.21v33.4c0,3.98,3.23,7.21,7.21,7.21h8.33v17.67l23.48-17.67h60.24c3.98,0,7.21-3.23,7.21-7.21V7.21c0-3.98-3.23-7.21-7.21-7.21Z"/>
+      </g>
+      <g>
+        <g>
+          <circle class="cls-4" cx="141.95" cy="87.16" r="23.91"/>
+          <g class="cls-2">
+            <ellipse class="cls-6" cx="141.95" cy="110.35" rx="15.98" ry="17.4"/>
+            <circle class="cls-5" cx="141.95" cy="81.01" r="8.8"/>
+          </g>
+        </g>
+        <path class="cls-4" d="M7.21,63.56h92.04c3.98,0,7.21,3.23,7.21,7.21v33.4c0,3.98-3.23,7.21-7.21,7.21h-8.33v17.67l-23.48-17.67H7.21c-3.98,0-7.21-3.23-7.21-7.21v-33.4c0-3.98,3.23-7.21,7.21-7.21Z"/>
+      </g>
+      <g>
+        <g>
+          <circle class="cls-6" cx="23.91" cy="151.04" r="23.91"/>
+          <g class="cls-3">
+            <ellipse class="cls-1" cx="23.91" cy="174.23" rx="15.98" ry="17.4"/>
+            <circle class="cls-5" cx="23.91" cy="144.89" r="8.8"/>
+          </g>
+        </g>
+        <path class="cls-6" d="M158.65,127.13h-92.04c-3.98,0-7.21,3.23-7.21,7.21v33.4c0,3.98,3.23,7.21,7.21,7.21h8.33v17.67l23.48-17.67h60.24c3.98,0,7.21-3.23,7.21-7.21v-33.4c0-3.98-3.23-7.21-7.21-7.21Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

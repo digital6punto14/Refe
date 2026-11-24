@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "title": "Etichetta",
+  "slug": "etichetta",
+  "blockTypes": [
+    "core/paragraph",
+    "core/post-terms",
+    "core/post-date"
+  ],
+  "styles": {
+    "color": {
+      "background": "var:preset|color|bright-blue-dark",
+      "text": "var:preset|color|white-blue"
+    },
+    "border": {
+      "radius": "32px"
+    },
+    "typography": {
+      "fontSize": "16px",
+      "lineHeight": "1"
+    },
+    "spacing": {
+      "padding": {
+        "top": "8px",
+        "bottom": "8px",
+        "left": "16px",
+        "right": "16px"
+      }
+    }
+  }
+}

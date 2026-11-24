@@ -1,0 +1,42 @@
+/* Testata del sito: fissa sopra le pagine. */
+header.wp-block-template-part { position: fixed; z-index: 1000; inset: 0 0 auto; pointer-events: none; }
+.admin-bar header.wp-block-template-part { top: var(--wp-admin--admin-bar--height, 0); }
+header.wp-block-template-part > .wp-block-group { padding: 32px 20px 20px; gap: 24px; }
+header.wp-block-template-part > .refe-ridotta { padding: 29px 32px 20px 20px; align-items: flex-start !important; }
+header.wp-block-template-part :is(a, button, nav, summary) { pointer-events: auto; }
+header .wp-block-site-logo img, header .refe-logo img { width: 154px; height: auto; display: block; transition: filter .25s; }
+header .wp-block-buttons .wp-block-button__link { transition: background-color .25s, color .25s; }
+header.su-arancione :is(.wp-block-site-logo img, .refe-logo img) { filter: brightness(0) invert(1); }
+header.su-arancione .wp-block-button:not(.refe-pannello *) .wp-block-button__link { background: var(--wp--preset--color--white); color: var(--wp--preset--color--solar-ember); }
+@media (max-width: 800px) {
+  header.wp-block-template-part > .wp-block-group { padding: 14px 16px; gap: 8px; min-height: 92px; }
+  header .wp-block-site-logo img, header .refe-logo img { width: 94px; }
+}
+/* Piè di pagina */
+footer.wp-block-template-part a { text-underline-offset: 3px; }
+footer .refe-footer-credito a, footer .refe-footer-su a { text-decoration: none; }
+footer.wp-block-template-part a:hover { color: #ff9561; }
+.refe-errore { min-height: 90svh; }
+.refe-torna .wp-block-button__link { min-height: 48px; }
+footer .refe-footer-colonne > .wp-block-group { min-height: 267px; }
+footer .refe-footer-legali { width: min(100%, 214px); margin-top: 14px; padding-top: 24px; border-top: 1px solid #2f6cff; display: grid; gap: 2px; }
+footer .refe-footer-legali a { padding: 0; font-size: 14px; line-height: 21px; text-transform: none; color: var(--wp--preset--color--bright-blue-pale); }
+footer .refe-footer-recapiti { display: flex; flex-direction: column; gap: 20px; align-items: flex-end; text-align: right; }
+footer .refe-footer-recapiti > * { margin-block: 0 !important; }
+footer .refe-footer-recapiti > h3 { width: 100%; }
+footer .refe-footer-recapiti p { font-size: 16px; line-height: 21px; color: var(--wp--preset--color--white); }
+footer .refe-footer-recapiti h3 + p { padding-top: 14px; }
+footer .refe-footer-recapiti > .refe-footer-contatti { margin-top: auto !important; font-weight: 700; text-transform: uppercase; color: var(--wp--preset--color--solar-ember); }
+footer .refe-footer-contatti a { text-decoration: none; }
+footer .refe-footer-fine > * { margin-block: 0; }
+footer .refe-footer-fine .wp-block-social-link svg { width: 24px; height: 24px; }
+footer .refe-footer-su a { display: inline-flex; align-items: center; gap: 4px; }
+footer .refe-footer-su a::after { content: ""; width: 14px; height: 12px; background: currentColor; mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(90deg); }
+@media (max-width: 800px) {
+  footer .refe-footer-pannello { padding: 32px 20px 90px !important; }
+  footer .refe-footer-colonne { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; gap: 28px 20px !important; }
+  footer .refe-footer-colonne > .wp-block-group { min-height: 208px; }
+  footer .refe-footer-colonne > .refe-footer-recapiti { grid-column: span 2; align-items: flex-start; text-align: left; min-height: 219px; }
+  footer .refe-footer-recapiti h3 + p { padding-top: 0; }
+  footer .refe-footer-fine { flex-direction: column; align-items: flex-start !important; gap: 14px 24px !important; font-size: 10px !important; }
+}

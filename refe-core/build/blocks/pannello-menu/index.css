@@ -1,0 +1,1 @@
+.editor-styles-wrapper .refe-pannello{position:relative}.editor-styles-wrapper .refe-pannello>.refe-pannello__fascia{display:none;min-width:560px}.editor-styles-wrapper .refe-pannello:is(.is-selected,.has-child-selected)>.refe-pannello__fascia{display:block;left:0;position:absolute;top:100%}

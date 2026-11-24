@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "title": "Scheda",
+  "slug": "scheda",
+  "blockTypes": [
+    "core/group"
+  ],
+  "styles": {
+    "border": {
+      "radius": "16px"
+    },
+    "spacing": {
+      "padding": {
+        "top": "22px",
+        "right": "22px",
+        "bottom": "22px",
+        "left": "22px"
+      },
+      "blockGap": "10px"
+    }
+  }
+}

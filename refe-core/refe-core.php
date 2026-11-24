@@ -3,7 +3,7 @@
  * Plugin Name:       Refe Core
  * Plugin URI:        https://refe.net
  * Description:       Contenuti, campi, blocchi, impostazioni, SEO e funzioni per gli agenti AI del sito Refe.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Author:            6.14
@@ -17,3 +17,23 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+define( 'REFE_CORE_VERSION', '0.2.0' );
+define( 'REFE_CORE_FILE', __FILE__ );
+define( 'REFE_CORE_DIR', plugin_dir_path( __FILE__ ) );
+define( 'REFE_CORE_URL', plugin_dir_url( __FILE__ ) );
+
+spl_autoload_register(
+	static function ( string $classe ): void {
+		if ( ! str_starts_with( $classe, 'Refe\\Core\\' ) ) {
+			return;
+		}
+		$nome = strtolower( str_replace( array( '\\', '_' ), '-', substr( $classe, 10 ) ) );
+		$file = REFE_CORE_DIR . 'includes/class-' . $nome . '.php';
+		if ( is_readable( $file ) ) {
+			require $file;
+		}
+	}
+);
+
+Refe\Core\Blocchi::avvia();

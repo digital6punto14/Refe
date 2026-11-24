@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "title": "Vetro scuro",
+  "slug": "vetro-scuro",
+  "blockTypes": [
+    "core/group",
+    "core/column"
+  ],
+  "styles": {
+    "border": {
+      "radius": "16px"
+    },
+    "color": {
+      "text": "var:preset|color|white"
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var:preset|color|white"
+        }
+      }
+    }
+  }
+}

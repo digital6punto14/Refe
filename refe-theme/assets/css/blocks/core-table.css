@@ -1,0 +1,4 @@
+.wp-block-table { overflow-x: auto; margin: 18px 0; }
+.wp-block-table table { border-collapse: collapse; min-width: 560px; width: 100%; }
+.wp-block-table :is(th, td) { text-align: left; vertical-align: top; padding: 10px; border: 0; border-bottom: 1px solid #00308733; font-size: 15px; line-height: 1.4; }
+.wp-block-table thead { border-bottom: 0; }

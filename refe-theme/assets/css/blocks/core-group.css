@@ -1,0 +1,57 @@
+/* Schemi di sezione: grana, bagliore e filigrana. Gli interruttori arrivano dal pannello «Sfondo sezione» di Refe Core. */
+[class*="is-style-schema-"] { position: relative; isolation: isolate; background-image: var(--refe-grana); background-size: 180px 180px; --refe-titolo-chiave: var(--wp--preset--color--solar-ember); }
+.is-style-schema-white-blue { --refe-chiave: var(--wp--preset--color--solar-ember); background-image: var(--refe-grana-chiara); --refe-sec-fondo: var(--wp--preset--color--bright-blue); --refe-sec-testo: var(--wp--preset--color--white); --refe-sec-fondo-su: var(--wp--preset--color--bright-blue-light); --refe-scheda-fondo: var(--refe-vetro); --refe-scheda-bordo: var(--refe-vetro-bordo); --refe-scheda-ombra: var(--refe-vetro-ombra); --refe-scheda-sfoca: blur(32px) saturate(140%); }
+:is(.is-style-schema-bright-blue, .is-style-schema-midnight-moon, .is-style-schema-midnight-moon-light, .is-style-testata) { --refe-sec-fondo: var(--wp--preset--color--white-blue); --refe-sec-testo: var(--wp--preset--color--solar-ember); --refe-sec-fondo-su: var(--wp--preset--color--white); --refe-sec-testo-su: var(--wp--preset--color--solar-ember); --refe-scheda-fondo: var(--refe-vetro-scuro); --refe-scheda-bordo: var(--refe-vetro-scuro-bordo); --refe-scheda-ombra: var(--refe-vetro-scuro-ombra); --refe-scheda-sfoca: blur(28px) saturate(135%); }
+.is-style-schema-solar-ember { --refe-chiave: currentColor; --refe-sec-fondo: var(--wp--preset--color--bright-blue); --refe-sec-testo: var(--wp--preset--color--white); --refe-sec-fondo-su: var(--wp--preset--color--midnight-moon); --refe-scheda-fondo: linear-gradient(125deg, #ffffff38, #ffffff0f 60%), rgb(164 54 0 / .22); --refe-scheda-bordo: #ffffff80; --refe-scheda-ombra: inset 0 1px 0 #ffffff59, 0 16px 36px #4c140033; --refe-scheda-sfoca: blur(28px) saturate(135%); background-image: var(--refe-grana), radial-gradient(ellipse at 90% 10%, #ff7a2ecc, transparent 55%), radial-gradient(ellipse at 5% 95%, #c84500b3, transparent 60%); background-size: 180px 180px, auto, auto; }
+.is-style-schema-solar-ember :is(a, button, input, select, textarea):focus-visible { outline-color: var(--wp--preset--color--midnight-moon); }
+.refe-senza-grana[class*="is-style-schema-"] { background-image: none; }
+.refe-bagliore[class*="is-style-schema-"]:not(.is-style-schema-solar-ember) { background-image: var(--refe-grana), radial-gradient(ellipse at 85% 20%, #1559d680, transparent 55%), radial-gradient(ellipse at 10% 90%, #021e4299, transparent 60%); background-size: 180px 180px, auto, auto; }
+.refe-bagliore.is-style-schema-white-blue[class*="is-style-schema-"] { background-image: var(--refe-grana-chiara), radial-gradient(ellipse at 88% 18%, #9ec1ff8c, transparent 48%), radial-gradient(ellipse at 6% 86%, #c8d9efcc, transparent 52%); }
+.refe-senza-grana.refe-bagliore[class*="is-style-schema-"]:not(.is-style-schema-solar-ember) { background-image: radial-gradient(ellipse at 85% 20%, #1559d680, transparent 55%), radial-gradient(ellipse at 10% 90%, #021e4299, transparent 60%); background-size: auto; }
+.refe-filigrana[class*="is-style-schema-"]::before { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: currentColor; opacity: .06; mask: var(--refe-simbolo) 105% 50% / auto 150% no-repeat; }
+.refe-filigrana.is-style-schema-white-blue::before { background: var(--wp--preset--color--bright-blue); opacity: .05; }
+.refe-filigrana.is-style-schema-solar-ember::before { background: var(--wp--preset--color--solar-ember-dark); opacity: .22; }
+/* Immagine di sfondo scelta nell'editor: vince sulla grana. */
+[class*="is-style-schema-"][style*="background-image"] { background-size: cover; }
+
+/* Vetro e schede */
+:is(.is-style-vetro, .is-style-vetro-forte, .is-style-vetro-scuro, .is-style-scheda) { border: 1px solid var(--refe-vetro-bordo); background: var(--refe-vetro); box-shadow: var(--refe-vetro-ombra); -webkit-backdrop-filter: blur(32px) saturate(140%); backdrop-filter: blur(32px) saturate(140%); }
+.is-style-vetro-forte { background: var(--refe-vetro-forte); }
+.is-style-vetro-scuro { border-color: var(--refe-vetro-scuro-bordo); background: var(--refe-vetro-scuro); box-shadow: var(--refe-vetro-scuro-ombra); -webkit-backdrop-filter: blur(28px) saturate(135%); backdrop-filter: blur(28px) saturate(135%); }
+.is-style-scheda, .is-style-vetro { border-color: var(--refe-scheda-bordo, var(--refe-vetro-bordo)); background: var(--refe-scheda-fondo, var(--refe-vetro)); box-shadow: var(--refe-scheda-ombra, var(--refe-vetro-ombra)); -webkit-backdrop-filter: var(--refe-scheda-sfoca, blur(32px)); backdrop-filter: var(--refe-scheda-sfoca, blur(32px)); }
+.is-style-vetro-forte, .is-style-vetro-forte :is(h2, h3) { color: var(--wp--preset--color--midnight-moon); }
+.is-style-scheda { position: relative; display: flex; flex-direction: column; min-height: 220px; height: 100%; }
+.is-style-scheda > * { margin-block: 0; }
+.is-style-scheda > :is(h2, h3, h4) { padding-top: 12px; }
+.is-style-scheda > p { font-size: 16px; line-height: 1.45; }
+.is-style-scheda > .wp-block-image { margin-bottom: auto; }
+.is-style-scheda > .wp-block-image img { width: auto; height: 84px; }
+.is-style-scheda > .is-style-freccia { margin-top: auto; padding-top: 12px; font-size: 14px; line-height: 1; }
+/* Tutta la scheda è cliccabile tramite il link nel titolo. */
+.is-style-scheda :is(h2, h3, h4) a { text-decoration: none; }
+.is-style-scheda :is(h2, h3, h4) a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.is-style-scheda:has(:is(h2, h3, h4) a) { transition: translate .3s var(--wp--custom--ritmo), box-shadow .3s var(--wp--custom--ritmo); }
+.is-style-scheda:has(:is(h2, h3, h4) a):hover { translate: 0 -4px; box-shadow: var(--refe-vetro-ombra), 0 18px 34px #021e4233; }
+.is-style-scheda:has(:is(h2, h3, h4) a):active { translate: 0 0; }
+
+/* Testata di pagina */
+.is-style-testata { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: min(720px, 82svh); padding-top: 150px; padding-bottom: clamp(48px, 6vw, 84px); overflow: clip; background-image: var(--refe-grana), radial-gradient(ellipse at 80% 0%, #0051d7a6, transparent 58%), linear-gradient(180deg, var(--wp--preset--color--bright-blue), var(--wp--preset--color--midnight-moon)); background-size: 180px 180px, auto, auto; }
+.wp-block-group.is-style-testata { padding-left: var(--refe-margine); padding-right: var(--refe-margine); }
+.is-style-testata > * { width: 100%; }
+.is-style-testata.refe-filigrana::before { content: ""; position: absolute; z-index: -1; inset: 0; width: auto; background: var(--wp--preset--color--white); opacity: .05; mask: var(--refe-simbolo) 104% 40% / auto 135% no-repeat; }
+.is-style-testata > .wp-block-columns { flex: 1; align-items: stretch !important; }
+.is-style-testata > .wp-block-columns > .wp-block-column:first-child { align-self: flex-end; }
+.is-style-testata > .wp-block-columns > .wp-block-column:last-child { display: grid; align-self: stretch; align-items: center; }
+.is-style-testata.refe-bassa { min-height: 0; }
+.is-style-testata h1 { max-width: 15ch; }
+.is-style-testata h1.has-grande-font-size { max-width: 20ch; }
+.is-style-testata h1 + p { max-width: 58ch; margin-top: 20px; line-height: 1.5; color: var(--wp--preset--color--white-blue); }
+@media (max-width: 800px) {
+  .is-style-testata { min-height: min(640px, 84svh); padding-top: 130px; }
+  .is-style-testata > .wp-block-columns { flex: none; }
+  .is-style-testata > .wp-block-columns > .wp-block-column:last-child:not(:has(.is-style-a-filo)) { order: -1; }
+  .is-style-testata > .wp-block-columns img { max-width: 180px; }
+  .is-style-testata > .wp-block-columns .is-style-a-filo img { max-width: none; }
+  .is-style-testata .wp-block-image { margin-inline: 0; }
+}
+@media (prefers-reduced-transparency: reduce) { :is(.is-style-vetro, .is-style-vetro-forte, .is-style-scheda) { background: var(--wp--preset--color--white-blue); } .is-style-vetro-scuro { background: var(--wp--preset--color--midnight-moon); } }

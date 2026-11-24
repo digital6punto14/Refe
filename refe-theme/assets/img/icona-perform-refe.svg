@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 165.4 154.12">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #002a7a;
+      }
+
+      .cls-2 {
+        fill: #d8dfe9;
+      }
+
+      .cls-2, .cls-3 {
+        opacity: .5;
+      }
+
+      .cls-4 {
+        fill: #0a1c39;
+      }
+    </style>
+  </defs>
+  <g id="Livello_1-2" data-name="Livello 1">
+    <g>
+      <polygon class="cls-2" points="164.04 154.12 0 154.12 0 0 17.38 0 17.38 136.75 164.04 136.75 164.04 154.12"/>
+      <g>
+        <rect class="cls-1" x="80.12" y="44.84" width="35.75" height="80.33"/>
+        <g class="cls-3">
+          <rect class="cls-4" x="129.65" y="9.26" width="35.75" height="115.91"/>
+        </g>
+        <g class="cls-3">
+          <rect class="cls-4" x="31.03" y="70" width="35.75" height="55.17"/>
+        </g>
+      </g>
+      <path class="cls-4" d="M114.78,11.62L109.69.3l-42.77,19.23c-3.77-4.78-9.61-7.85-16.17-7.85-11.37,0-20.59,9.22-20.59,20.59s9.22,20.59,20.59,20.59,20.59-9.22,20.59-20.59c0-.37-.01-.74-.03-1.1l43.47-19.55ZM50.74,40.45c-4.51,0-8.18-3.67-8.18-8.18s3.67-8.18,8.18-8.18,8.18,3.67,8.18,8.18-3.67,8.18-8.18,8.18Z"/>
+    </g>
+  </g>
+</svg>

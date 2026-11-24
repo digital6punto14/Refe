@@ -1,0 +1,5 @@
+.wp-block-button__link { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; transition: background-color .2s, color .2s; }
+:is(p, h2) + .wp-block-buttons { margin-block-start: 26px; }
+:is(.wp-block-group, .wp-block-tabs) + .wp-block-buttons { margin-block-start: 28px; }
+.wp-block-button.is-style-secondario > .wp-block-button__link { background-color: var(--refe-sec-fondo, var(--wp--preset--color--bright-blue)); color: var(--refe-sec-testo, var(--wp--preset--color--white)); }
+.wp-block-button.is-style-secondario > .wp-block-button__link:hover { background-color: var(--refe-sec-fondo-su, var(--wp--preset--color--bright-blue-light)); color: var(--refe-sec-testo-su, var(--wp--preset--color--white)); }

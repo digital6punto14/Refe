@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "title": "Numero del passo",
+  "slug": "passo",
+  "blockTypes": [
+    "core/paragraph"
+  ],
+  "styles": {
+    "color": {
+      "text": "var:preset|color|bright-blue-pale"
+    },
+    "typography": {
+      "fontSize": "16px",
+      "fontWeight": "700",
+      "lineHeight": "1"
+    }
+  }
+}
