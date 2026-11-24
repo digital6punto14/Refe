@@ -1,0 +1,5 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "settings": { "appearanceTools": true, "useRootPaddingAwareAlignments": true, "layout": { "contentSize": "780px", "wideSize": "1260px" } }
+}

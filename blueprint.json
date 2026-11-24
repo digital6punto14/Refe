@@ -1,0 +1,46 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Refe — tema a blocchi",
+    "author": "6.14",
+    "description": "Anteprima del sito Refe: tema refe-theme, plugin refe-core e contenuti della demo."
+  },
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "features": { "networking": true, "intl": true },
+  "steps": [
+    { "step": "login", "username": "admin", "password": "password" },
+    { "step": "setSiteLanguage", "language": "it_IT" },
+    { "step": "setSiteOptions", "options": { "blogname": "Refe", "blogdescription": "Strategie di sviluppo sostenibile", "timezone_string": "Europe/Rome", "permalink_structure": "/%postname%/" } },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "advanced-custom-fields" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "wordpress-seo" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "contact-form-7" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "svg-support" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "site-mailer" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "cookiez" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "image-optimization" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    { "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "google-site-kit" }, "options": { "activate": true }, "ifAlreadyInstalled": "skip" },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "git:directory", "url": "https://github.com/digital6punto14/Refe", "ref": "sviluppo", "refType": "branch", "path": "refe-core" },
+      "options": { "activate": true, "targetFolderName": "refe-core" },
+      "ifAlreadyInstalled": "skip"
+    },
+    {
+      "step": "installTheme",
+      "themeData": { "resource": "git:directory", "url": "https://github.com/digital6punto14/Refe", "ref": "sviluppo", "refType": "branch", "path": "refe-theme" },
+      "options": { "activate": true, "targetFolderName": "refe-theme" },
+      "ifAlreadyInstalled": "skip"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": { "resource": "git:directory", "url": "https://github.com/digital6punto14/Refe", "ref": "sviluppo", "refType": "branch", "path": "contenuti" },
+      "options": { "activate": true, "targetFolderName": "refe-contenuti" },
+      "ifAlreadyInstalled": "skip"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; wp_set_current_user( 1 ); if ( function_exists( 'refe_contenuti_importa' ) ) { refe_contenuti_importa(); } flush_rewrite_rules();"
+    }
+  ]
+}
