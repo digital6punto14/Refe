@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+  "version": 3,
+  "title": "Riquadro segnaposto",
+  "slug": "segnaposto",
+  "blockTypes": [
+    "core/group"
+  ],
+  "styles": {
+    "border": {
+      "radius": "16px",
+      "style": "dashed",
+      "width": "1px",
+      "color": "#ffffff80"
+    },
+    "typography": {
+      "fontSize": "15px",
+      "fontWeight": "500"
+    }
+  }
+}

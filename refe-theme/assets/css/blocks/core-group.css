@@ -45,7 +45,7 @@
 .is-style-testata.refe-bassa { min-height: 0; }
 .is-style-testata h1 { max-width: 15ch; }
 .is-style-testata h1.has-grande-font-size { max-width: 20ch; }
-.is-style-testata h1 + p { max-width: 58ch; margin-top: 20px; line-height: 1.5; color: var(--wp--preset--color--white-blue); }
+.is-style-testata h1 + :is(p, .wp-block-post-excerpt) { max-width: 58ch; margin-top: 20px; line-height: 1.5; color: var(--wp--preset--color--white-blue); }
 @media (max-width: 800px) {
   .is-style-testata { min-height: min(640px, 84svh); padding-top: 130px; }
   .is-style-testata > .wp-block-columns { flex: none; }
@@ -55,3 +55,10 @@
   .is-style-testata .wp-block-image, .is-style-testata .wp-block-image.aligncenter { margin-inline: 0 auto !important; }
 }
 @media (prefers-reduced-transparency: reduce) { :is(.is-style-vetro, .is-style-vetro-forte, .is-style-scheda) { background: var(--wp--preset--color--white-blue); } .is-style-vetro-scuro { background: var(--wp--preset--color--midnight-moon); } }
+/* Fondo azzurro sfumato (case studies in Home). */
+.refe-cielo.is-style-schema-white-blue[class*="is-style-schema-"] { background-color: #ddeafb !important; background-image: var(--refe-grana), radial-gradient(ellipse at 13% 12%, #f6f9ff 0%, transparent 53%), radial-gradient(ellipse at 90% 82%, #c8d9ef 0%, transparent 55%), linear-gradient(135deg, #e9f1fc, #d7e4f4); background-size: 180px 180px, cover, cover, cover; }
+.is-style-segnaposto { background: #ffffff14; box-sizing: border-box; display: grid; place-items: center; min-height: 320px; padding: 16px; text-align: center; }
+@media (max-width: 800px) { .is-style-segnaposto { min-height: 220px; } }
+.is-style-testata .wp-block-post-excerpt__excerpt { margin: 0; }
+.is-style-testata :is(p, .wp-block-post-excerpt) + .is-style-etichetta { margin-top: 18px; }
+@media (max-width: 800px) { .refe-cielo > h2 br { display: none; } }

@@ -28,11 +28,11 @@ defined( 'ABSPATH' ) || exit;
 <h3 class="wp-block-heading">Scrivici o chiamaci</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"refe-recapito"} -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"email"}}}},"className":"refe-recapito"} -->
 <p class="refe-recapito"><a href="mailto:info@refe.net">info@refe.net</a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph {"className":"refe-recapito"} -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"telefono"}}}},"className":"refe-recapito"} -->
 <p class="refe-recapito"><a href="tel:+390236567111">02 3656 7111</a></p>
 <!-- /wp:paragraph -->
 
@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
 <h3 class="wp-block-heading">Vieni a trovarci</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"className":"refe-recapito"} -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"indirizzo"}}}},"className":"refe-recapito"} -->
 <p class="refe-recapito"><a href="https://maps.google.com/?q=Piazza+Luigi+di+Savoia+22+Milano">Piazza Luigi di Savoia, 22<br>20124 Milano MI</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>

@@ -26,3 +26,4 @@ header nav.wp-block-navigation .current-menu-item > .wp-block-navigation-item__c
   header nav.wp-block-navigation .is-menu-open .wp-block-navigation-item { display: block; width: 100%; }
   header nav.wp-block-navigation .is-menu-open .wp-block-navigation-item__content { display: flex; box-sizing: border-box; width: 100%; min-height: 45px; align-items: center; justify-content: flex-start; padding: 12px !important; font-size: 14px; }
 }
+header nav.wp-block-navigation .wp-block-navigation-item__content[aria-current] { color: var(--wp--preset--color--solar-ember); }

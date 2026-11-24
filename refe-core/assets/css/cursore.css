@@ -1,0 +1,17 @@
+/* Cursore Refe: simbolo dritto da 32 px, anello all'hover, onda al clic. */
+:root { --refe-cursore: 32px; }
+.refe-cursore { position: fixed; z-index: 1010; left: 0; top: 0; width: var(--refe-cursore); opacity: 0; pointer-events: none; transform: translate(-200px, -200px); will-change: transform; transition: opacity .2s; }
+.refe-cursore img { display: block; width: var(--refe-cursore); height: auto; transition: transform 140ms cubic-bezier(.2, .75, .25, 1); }
+.refe-cursore.is-visibile { opacity: 1; transition: none; }
+.refe-cursore.su-testata { opacity: 0; }
+.refe-cursore::after, .refe-onda { width: 44px; height: 44px; background: radial-gradient(circle closest-side, transparent 80%, rgba(249, 87, 0, .24) 87%, rgba(249, 87, 0, .86) 93%, transparent 100%); border-radius: 50%; pointer-events: none; }
+.refe-cursore::after { content: ""; position: absolute; left: 50%; top: 50%; opacity: 0; transform: translate(-50%, -50%) scale(.88); transition: opacity 140ms ease, transform 140ms cubic-bezier(.2, .75, .25, 1); }
+.refe-cursore.su-link img { transform: scale(1.125); }
+.refe-cursore.su-link::after { opacity: .78; transform: translate(-50%, -50%); }
+.refe-cursore.is-premuto img { transform: scale(.9); transition-duration: 85ms; }
+.refe-cursore.is-premuto::after { transform: translate(-50%, -50%) scale(.88); }
+.refe-cursore.su-arancione { filter: brightness(0) invert(1); }
+.refe-intro .refe-cursore:not(.nel-menu) { display: none; }
+.refe-onda { position: fixed; z-index: 1011; animation: refe-onda 220ms cubic-bezier(.2, .75, .25, 1) both; }
+@keyframes refe-onda { from { opacity: .85; transform: translate(-50%, -50%) scale(1); } to { opacity: 0; transform: translate(-50%, -50%) scale(1.48); } }
+@media (prefers-reduced-motion: reduce) { .refe-cursore, .refe-onda { display: none; } }

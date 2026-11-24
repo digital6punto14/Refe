@@ -1,0 +1,13 @@
+/* Ingressi di titoli e testi. Senza JavaScript o con movimento ridotto il testo è sempre visibile. */
+.refe-parola { display: inline-block; }
+.refe-anim-pronto [data-refe-anim="sfocato"]:not(.is-entrato) .refe-parola { opacity: 0; filter: blur(10px); }
+.is-entrato[data-refe-anim="sfocato"] .refe-parola { animation: refe-sfocato var(--refe-durata, 1040ms) cubic-bezier(.2, .6, .2, 1) both; animation-delay: calc(var(--i) * var(--refe-ritardo, 52ms)); }
+@keyframes refe-sfocato { from { opacity: 0; filter: blur(10px); } to { opacity: 1; filter: blur(0); } }
+:is([data-refe-anim="dal-basso"], [data-refe-anim="dissolvenza"]) { transition: opacity var(--refe-durata, 1040ms) ease var(--refe-ritardo, 200ms), transform var(--refe-durata, 1040ms) cubic-bezier(.2, .7, .2, 1) var(--refe-ritardo, 200ms); }
+.refe-anim-pronto :is([data-refe-anim="dal-basso"], [data-refe-anim="dissolvenza"]):not(.is-entrato) { opacity: 0; transition-duration: 0s; transition-delay: 0s; }
+.refe-anim-pronto [data-refe-anim="dal-basso"]:not(.is-entrato) { transform: translateY(18px); }
+[data-refe-anim="nitido"] { transition: opacity 1.04s ease, filter 1.04s ease; }
+.refe-anim-pronto [data-refe-anim="nitido"]:not(.is-entrato) { opacity: 0; filter: blur(10px); transition-duration: 0s; }
+.refe-fermo :is([data-refe-anim], .refe-parola) { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; transition: none !important; }
+@media (prefers-reduced-motion: reduce) { :is([data-refe-anim], .refe-parola) { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; } }
+@media print { :is([data-refe-anim], .refe-parola) { opacity: 1 !important; transform: none !important; filter: none !important; } }

@@ -1,0 +1,178 @@
+{
+    "key": "group_refe_case",
+    "title": "Dati del case study",
+    "fields": [
+        {
+            "key": "field_refe_case_ambito",
+            "label": "Ambito",
+            "name": "ambito",
+            "type": "text",
+            "instructions": "Compare accanto alla soluzione nel carosello della Home, per esempio «Rendicontazione digitale».",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 60
+        },
+        {
+            "key": "field_refe_case_link_url",
+            "label": "Link esterno",
+            "name": "link_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_refe_case_link_testo",
+            "label": "Testo del link esterno",
+            "name": "link_testo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 60
+        },
+        {
+            "key": "field_refe_case_risultato_1_numero",
+            "label": "Risultato 1: numero",
+            "name": "risultato_1_numero",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 20
+        },
+        {
+            "key": "field_refe_case_risultato_1_testo",
+            "label": "Risultato 1: testo",
+            "name": "risultato_1_testo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 120
+        },
+        {
+            "key": "field_refe_case_risultato_2_numero",
+            "label": "Risultato 2: numero",
+            "name": "risultato_2_numero",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 20
+        },
+        {
+            "key": "field_refe_case_risultato_2_testo",
+            "label": "Risultato 2: testo",
+            "name": "risultato_2_testo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 120
+        },
+        {
+            "key": "field_refe_case_risultato_3_numero",
+            "label": "Risultato 3: numero",
+            "name": "risultato_3_numero",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 20
+        },
+        {
+            "key": "field_refe_case_risultato_3_testo",
+            "label": "Risultato 3: testo",
+            "name": "risultato_3_testo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "maxlength": 120
+        },
+        {
+            "key": "field_refe_case_segnaposto",
+            "label": "Segnaposto",
+            "name": "segnaposto",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "I risultati sono ancora da definire",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "refe_case"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1795478400
+}

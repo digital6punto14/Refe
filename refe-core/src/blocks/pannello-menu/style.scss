@@ -26,7 +26,6 @@
 		}
 	}
 
-	&.is-section details > summary { color: var(--wp--preset--color--solar-ember, #f95700); }
 	details[open] > summary { color: var(--wp--preset--color--bright-blue, #003087); }
 	details[open] > summary::after { transform: translateY(3px) rotate(225deg); }
 }

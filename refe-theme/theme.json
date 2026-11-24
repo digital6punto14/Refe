@@ -88,7 +88,7 @@
         { "slug": "medio", "name": "Titolo medio", "size": "clamp(30px, 3vw, 50px)" },
         { "slug": "grande", "name": "Titolo grande", "size": "clamp(36px, 4.6vw, 68px)" },
         { "slug": "molto-grande", "name": "Titolo molto grande", "size": "clamp(40px, 5.6vw, 84px)" },
-        { "slug": "copertina", "name": "Titolo copertina", "size": "clamp(37px, 5.7vw, 90px)" }
+        { "slug": "copertina", "name": "Titolo copertina", "size": "clamp(46px, 6vw, 82px)" }
       ]
     },
     "custom": {

@@ -1,0 +1,18 @@
+.refe-ricerca__apri { display: grid; place-items: center; box-sizing: border-box; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer; transition: filter .25s; }
+.refe-ricerca__apri::before { content: ""; width: 27px; height: 27px; background: url("../../img/cerca.svg") center / contain no-repeat; }
+header.su-arancione .refe-ricerca__apri { filter: brightness(0) invert(1); }
+.refe-ricerca__finestra { box-sizing: border-box; width: min(720px, 100% - 32px); max-height: 85svh; padding: 55px; border: 0; border-radius: 28px; overflow: auto; background: var(--wp--preset--color--white-blue, #dce3ec); color: #09254b; box-shadow: 0 25px 100px rgb(2 30 66 / .25); pointer-events: auto; }
+.refe-ricerca__finestra::backdrop { background: rgb(2 30 66 / .55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.refe-ricerca__finestra h2 { margin: 0 0 25px; padding-right: 10px; color: inherit; font-size: clamp(31.58px, calc(28.71px + .7178vi), 37.9px); font-weight: 500; line-height: 1.13; letter-spacing: -.025em; }
+.refe-ricerca__finestra label { display: block; margin-bottom: 10px; font-size: 14px; }
+.refe-ricerca__finestra input { box-sizing: border-box; width: 100%; padding: 13px; border: 1px solid #748398; border-radius: 8px; background: #fff; color: #14284c; font: inherit; }
+.refe-ricerca__chiudi { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e2e9f3; color: inherit; font-size: 17px; cursor: pointer; }
+.refe-ricerca__stato { margin: 15px 0 0; font-size: 15px; }
+.refe-ricerca__elenco { display: grid; max-height: 40svh; margin: 8px 0 0; padding: 0; overflow: auto; list-style: none; }
+.refe-ricerca__elenco a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 12px 0; border-bottom: 1px solid #c8d3e1; color: inherit; text-decoration: none; }
+.refe-ricerca__elenco a:hover { color: var(--wp--preset--color--bright-blue-vivid, #0051d7); }
+.refe-ricerca__elenco small { flex: none; font-size: 13px; opacity: .75; }
+@media (max-width: 800px) {
+	.refe-ricerca { display: none; }
+	.refe-ricerca__finestra { padding: 55px 28px 32px; border-radius: 24px; }
+}

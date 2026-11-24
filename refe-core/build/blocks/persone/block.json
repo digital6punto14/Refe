@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/persone",
+  "title": "Persone",
+  "category": "refe",
+  "icon": "groups",
+  "description": "Schede delle persone; girano e mostrano il video.",
+  "textdomain": "refe-core",
+  "attributes": {
+    "scelte": {
+      "type": "array",
+      "default": []
+    },
+    "quante": {
+      "type": "number",
+      "default": 0
+    },
+    "testoLink": {
+      "type": "string",
+      "default": "Guarda il video"
+    },
+    "video": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "refe-comune",
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

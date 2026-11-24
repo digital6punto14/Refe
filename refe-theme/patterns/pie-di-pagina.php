@@ -83,15 +83,15 @@ defined( 'ABSPATH' ) || exit;
 <h3 class="wp-block-heading has-solar-ember-color has-text-color" style="border-bottom-color:#2f6cff;border-bottom-width:1px;padding-bottom:8px;font-size:14px;font-weight:400;letter-spacing:0;line-height:21px;text-transform:uppercase">Refe</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"indirizzo_compatto"}}}}} -->
 <p><a href="https://maps.google.com/?q=Piazza+Luigi+di+Savoia+22+Milano">Piazza Luigi di Savoia,<br>22, 20124 Milano MI</a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"telefono"}}}}} -->
 <p><a href="tel:+390236567111">02 3656 7111</a></p>
 <!-- /wp:paragraph -->
 
-<!-- wp:paragraph -->
+<!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"email"}}}}} -->
 <p><a href="mailto:info@refe.net">info@refe.net</a></p>
 <!-- /wp:paragraph -->
 
@@ -102,7 +102,7 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"refe-footer-fine","style":{"spacing":{"padding":{"top":"18px","bottom":"10px"},"blockGap":"18px"},"typography":{"fontSize":"11px","lineHeight":"1.5"}},"textColor":"bright-blue-pale","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-<div class="wp-block-group refe-footer-fine has-bright-blue-pale-color has-text-color" style="padding-top:18px;padding-bottom:10px;font-size:11px;line-height:1.5"><!-- wp:paragraph -->
+<div class="wp-block-group refe-footer-fine has-bright-blue-pale-color has-text-color" style="padding-top:18px;padding-bottom:10px;font-size:11px;line-height:1.5"><!-- wp:paragraph {"metadata":{"bindings":{"content":{"source":"refe/azienda","args":{"campo":"copyright"}}}}} -->
 <p>© Refe Srl 2026 · P. IVA 05123890963</p>
 <!-- /wp:paragraph -->
 

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/contatore",
+  "title": "Contatore",
+  "category": "refe",
+  "icon": "calculator",
+  "description": "Numero che ruota fino al valore quando entra nello schermo.",
+  "textdomain": "refe-core",
+  "attributes": {
+    "numero": {
+      "type": "number",
+      "default": 0
+    },
+    "testo": {
+      "type": "string",
+      "default": ""
+    },
+    "prefisso": {
+      "type": "string",
+      "default": ""
+    },
+    "suffisso": {
+      "type": "string",
+      "default": ""
+    },
+    "etichetta": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "segnaposto": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "color": {
+      "text": true,
+      "background": false
+    },
+    "typography": {
+      "fontSize": true,
+      "__experimentalFontWeight": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

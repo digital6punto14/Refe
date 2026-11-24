@@ -1,0 +1,89 @@
+{
+    "key": "group_refe_persona",
+    "title": "Persona",
+    "fields": [
+        {
+            "key": "field_refe_persona_ruolo",
+            "label": "Ruolo",
+            "name": "ruolo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_refe_persona_video_link",
+            "label": "Video: link",
+            "name": "video_link",
+            "type": "url",
+            "instructions": "YouTube o Vimeo. In alternativa scegli un file qui sotto.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_refe_persona_video_file",
+            "label": "Video: file",
+            "name": "video_file",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "mime_types": "mp4,webm"
+        },
+        {
+            "key": "field_refe_persona_segnaposto",
+            "label": "Segnaposto",
+            "name": "segnaposto",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Persona ancora da definire",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "refe_persona"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1795478400
+}

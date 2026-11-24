@@ -125,7 +125,9 @@ defined( 'ABSPATH' ) || exit;
 <!-- /wp:navigation -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"12px"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group"><!-- wp:buttons -->
+<div class="wp-block-group"><!-- wp:refe/ricerca /-->
+
+<!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contatti/' ) ); ?>">Contatti</a></div>
 <!-- /wp:button --></div>

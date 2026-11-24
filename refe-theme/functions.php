@@ -56,6 +56,7 @@ add_action( 'wp_enqueue_scripts', 'refe_theme_enqueue' );
  * Categoria dei pattern del progetto.
  */
 function refe_theme_categorie_pattern(): void {
+	register_block_pattern_category( 'refe-home', array( 'label' => __( 'Refe: home', 'refe-theme' ) ) );
 	register_block_pattern_category( 'refe-testate', array( 'label' => __( 'Refe: testate', 'refe-theme' ) ) );
 	register_block_pattern_category( 'refe-sezioni', array( 'label' => __( 'Refe: sezioni', 'refe-theme' ) ) );
 	register_block_pattern_category( 'refe-chiusure', array( 'label' => __( 'Refe: chiusure', 'refe-theme' ) ) );

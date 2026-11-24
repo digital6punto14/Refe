@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/corso",
+  "title": "Videocorso",
+  "category": "refe",
+  "icon": "welcome-learn-more",
+  "description": "Lettore, moduli e lezioni, con avanzamento ricordato nel browser.",
+  "textdomain": "refe-core",
+  "allowedBlocks": [
+    "refe/modulo"
+  ],
+  "attributes": {
+    "immagine": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "refe-comune",
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

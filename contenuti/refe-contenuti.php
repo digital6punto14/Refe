@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Refe — contenuti demo
  * Description:       Importatore dei contenuti della demo. Si lancia dal blueprint o da Strumenti e si può ripetere senza duplicare nulla. Non serve sul sito definitivo.
- * Version:           0.2.0
+ * Version:           0.3.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Author:            6.14
@@ -18,6 +18,7 @@ define( 'REFE_CONTENUTI_DIR', plugin_dir_path( __FILE__ ) );
 
 require_once REFE_CONTENUTI_DIR . 'includes/funzioni.php';
 require_once REFE_CONTENUTI_DIR . 'includes/anteprima-fase-2.php';
+require_once REFE_CONTENUTI_DIR . 'includes/anteprima-fase-3.php';
 
 /**
  * Punto di ingresso dell'importatore.
@@ -25,6 +26,7 @@ require_once REFE_CONTENUTI_DIR . 'includes/anteprima-fase-2.php';
 function refe_contenuti_importa(): void {
 	refe_contenuti_pulisci();
 	refe_contenuti_fase_2();
+	refe_contenuti_fase_3();
 	flush_rewrite_rules();
 }
 

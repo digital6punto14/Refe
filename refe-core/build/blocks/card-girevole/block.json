@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/card-girevole",
+  "title": "Scheda girevole",
+  "category": "refe",
+  "icon": "image-flip-horizontal",
+  "description": "Si gira al passaggio del mouse, al tocco o da tastiera. Fronte e retro sono a blocchi.",
+  "textdomain": "refe-core",
+  "allowedBlocks": [
+    "refe/faccia"
+  ],
+  "attributes": {
+    "nome": {
+      "type": "string",
+      "default": ""
+    },
+    "filigrana": {
+      "type": "string",
+      "default": "scura"
+    }
+  },
+  "styles": [
+    {
+      "name": "normale",
+      "label": "Normale",
+      "isDefault": true
+    },
+    {
+      "name": "grande",
+      "label": "Grande"
+    }
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

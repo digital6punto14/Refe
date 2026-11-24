@@ -1,0 +1,11 @@
+.wp-block-refe-progetto-successivo.refe-successivo { position: relative; isolation: isolate; box-sizing: border-box; display: grid; align-content: end; gap: 8px; min-height: 420px; padding: 48px var(--refe-margine, 20px); color: #fff; text-decoration: none; overflow: clip; }
+.refe-successivo::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgb(2 30 66 / .88), rgb(0 48 135 / .35)); }
+.refe-successivo > img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; transition: scale .8s cubic-bezier(.2, .7, .2, 1); }
+.refe-successivo:hover > img { scale: 1.03; }
+.refe-successivo > span { font-size: 17px; line-height: 1.4; }
+.refe-successivo strong { display: flex; align-items: center; gap: 18px; font-size: clamp(32px, 4vw, 60px); line-height: 1.05; letter-spacing: -.03em; color: var(--wp--preset--color--solar-ember, #f95700); }
+.refe-successivo .refe-freccia { width: 34px; height: 27px; }
+@media (hover: hover) and (pointer: fine) {
+	.refe-successivo__testo { opacity: 0; transform: translateY(10px); transition: opacity .4s ease-out, transform .4s ease-out; }
+	.refe-successivo:is(:hover, :focus-visible) .refe-successivo__testo { opacity: 1; transform: none; }
+}

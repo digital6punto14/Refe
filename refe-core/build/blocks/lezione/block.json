@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/lezione",
+  "title": "Lezione",
+  "category": "refe",
+  "icon": "video-alt3",
+  "description": "Titolo, durata e video di una lezione.",
+  "textdomain": "refe-core",
+  "parent": [
+    "refe/modulo"
+  ],
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "default": "",
+      "role": "content"
+    },
+    "durata": {
+      "type": "string",
+      "default": "00:00"
+    },
+    "link": {
+      "type": "string",
+      "default": ""
+    },
+    "file": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

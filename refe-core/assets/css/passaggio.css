@@ -1,0 +1,6 @@
+/* Passaggio sfumato tra le pagine (View Transitions). Dove non è supportato la pagina cambia subito. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root), ::view-transition-new(root) { animation-duration: .28s; }
+  header.wp-block-template-part { view-transition-name: refe-testata; }
+}

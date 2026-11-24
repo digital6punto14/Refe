@@ -1,0 +1,7 @@
+/* Testi lunghi: articoli e pagine legali. */
+.refe-prosa .wp-block-post-content > * + * { margin-block-start: 14px; }
+.refe-prosa .wp-block-post-content > h2 { margin-block: 44px 14px; color: var(--wp--preset--color--solar-ember); font-size: clamp(25px, 2.3vw, 34px); font-weight: 700; }
+.refe-prosa .wp-block-post-content > h2:first-child { margin-block-start: 0; }
+.refe-prosa :is(p, li) { font-size: 18px; line-height: 1.6; overflow-wrap: break-word; }
+.refe-prosa a:not(.wp-block-button__link) { color: var(--wp--preset--color--bright-blue); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.refe-prosa small { font-size: 14px; opacity: .75; }

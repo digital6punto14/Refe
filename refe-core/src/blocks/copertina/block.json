@@ -1,0 +1,64 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "refe/copertina",
+	"title": "Copertina animata",
+	"category": "refe",
+	"icon": "cover-image",
+	"description": "Sfondo animato, simbolo che diventa cursore, testi a blocchi. Solo in cima alla Home.",
+	"textdomain": "refe-core",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"video": {
+			"type": "object",
+			"default": {}
+		},
+		"simbolo": {
+			"type": "object",
+			"default": {}
+		},
+		"venti": {
+			"type": "object",
+			"default": {}
+		},
+		"descrizione": {
+			"type": "string",
+			"default": "Refe, 20 anni"
+		},
+		"sfondo": {
+			"type": "boolean",
+			"default": true
+		},
+		"testoPausa": {
+			"type": "string",
+			"default": "Pausa animazione"
+		},
+		"testoAvvia": {
+			"type": "string",
+			"default": "Riprendi animazione"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"align": [
+			"full"
+		],
+		"multiple": false
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"refe-comune",
+		"file:./style-index.css"
+	],
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

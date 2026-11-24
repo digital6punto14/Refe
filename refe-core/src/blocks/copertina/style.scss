@@ -1,0 +1,42 @@
+.refe-copertina { position: relative; z-index: 2; box-sizing: border-box; height: 100svh; min-height: 740px; color: var(--wp--preset--color--white-blue, #dce3ec); background: var(--wp--preset--color--midnight-moon, #021e42); }
+.refe-copertina__scena { position: relative; isolation: isolate; height: 100%; overflow: hidden; background: inherit; }
+.refe-copertina__scena::after { content: ""; position: absolute; z-index: 1; inset: 0; pointer-events: none; background: linear-gradient(180deg, #021e4200 18%, #021e42d9 47%, #021e42 76%); opacity: var(--ombra, 0); }
+.refe-copertina__campo { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.refe-copertina__alone { position: absolute; z-index: 4; left: var(--mx, 50%); top: var(--my, 50%); width: 460px; height: 460px; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; opacity: calc(var(--luce, 0) * var(--alone, 1)); background: radial-gradient(circle, rgb(139 200 255 / .1) 0%, rgb(139 200 255 / .05) 32%, transparent 68%); }
+.refe-copertina__simbolo { position: absolute; z-index: 3; left: 0; top: 0; width: 53px; height: 48px; pointer-events: none; transform-origin: center; }
+.refe-copertina__giro, .refe-copertina__giro img { position: absolute; left: 0; top: 0; display: block; width: 53px; height: 48px; max-width: none; }
+.refe-copertina__posto { position: absolute; z-index: 2; right: calc(var(--refe-margine, 20px) + 1vw); bottom: clamp(90px, 14svh, 170px); width: clamp(240px, 27vw, 440px); aspect-ratio: 1.25; pointer-events: none; }
+.refe-copertina__posto.sopra { right: auto; bottom: auto; }
+.refe-copertina__venti { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .3s ease; }
+.refe-copertina__video { position: absolute; left: -7%; top: -7.5%; width: 114%; height: 115%; max-width: none; object-fit: contain; transition: opacity .25s ease; }
+.con-video .refe-copertina__venti { display: none; }
+.staccato .refe-copertina__video { opacity: 0; }
+.con-video:not(.staccato) .refe-copertina__simbolo { opacity: 0 !important; }
+.loop-pronto:not(.con-video):not(.loop-fermo):not(.staccato) .refe-copertina__giro { animation: refe-simbolo-loop 12s cubic-bezier(.55, 0, .3, 1) infinite; }
+.loop-pronto:not(.con-video):not(.loop-fermo):not(.staccato) .refe-copertina__venti { animation: refe-venti-loop 12s cubic-bezier(.55, 0, .3, 1) infinite; }
+.staccato .refe-copertina__giro { animation: refe-simbolo-torna .35s ease-out both; }
+@keyframes refe-simbolo-loop { 0%, 30% { opacity: 1; transform: scale(1); } 37%, 88% { opacity: 0; transform: scale(.6); } 96%, 100% { opacity: 1; transform: scale(1); } }
+@keyframes refe-venti-loop { 0%, 36% { opacity: 0; transform: scale(.85); } 44%, 78% { opacity: 1; transform: scale(1); } 86%, 100% { opacity: 0; transform: scale(1.06); } }
+@keyframes refe-simbolo-torna { from { opacity: .2; } to { opacity: 1; } }
+.refe-copertina__testo { position: absolute; z-index: 3; right: 320px; bottom: 46px; left: max(48px, 3.4vw); pointer-events: none; }
+.refe-copertina__testo > :is(.refe-copertina__comandi, .wp-block-buttons) { pointer-events: auto; }
+.refe-copertina__comandi { display: flex; align-items: center; min-height: 32px; margin-bottom: 16px; width: fit-content; }
+.refe-copertina__pausa { min-height: 36px; padding: 7px 14px; border: 1px solid #a6c9ed55; border-radius: 10px; background: transparent; color: inherit; font: inherit; font-size: 11px; line-height: 1.4; text-transform: uppercase; cursor: pointer; }
+.refe-copertina__testo .wp-block-heading { position: relative; z-index: 1; margin: 0; color: #f5f7fc; line-height: .93; letter-spacing: -.04em; transition: color .15s ease; }
+.refe-copertina__testo > p { max-width: 704px; margin: 24px 0 0; font-size: 16px; line-height: 1.4; transition: color .15s ease; }
+.refe-copertina__testo > .wp-block-buttons { width: fit-content; margin: 16px 0 0; }
+.refe-copertina .illuminato, .refe-copertina .illuminato :is(em, strong) { color: #ffc18c; }
+.refe-copertina.is-editor { height: auto; min-height: 640px; background: linear-gradient(160deg, #021e42, #123f66); }
+.refe-copertina.is-editor .refe-copertina__scena { min-height: 640px; overflow: visible; background: none; }
+.refe-copertina.is-editor .refe-copertina__testo { pointer-events: auto; }
+@media (max-width: 800px) {
+	.refe-copertina { min-height: 820px; }
+	.refe-copertina__testo { right: 20px; bottom: 92px; left: 20px; }
+	.refe-copertina__testo .wp-block-heading { line-height: .99; }
+	.refe-copertina__testo .wp-block-heading.has-copertina-font-size { font-size: clamp(37px, 7.6vw, 62px) !important; }
+	.refe-copertina__testo > p { margin-top: 18px; font-size: 15px; line-height: 1.45; }
+	.refe-copertina__testo > .wp-block-buttons { margin-top: 13px; }
+	.refe-copertina__pausa { font-size: 10px; }
+}
+@media (max-width: 510px) { .refe-copertina__testo .wp-block-heading.has-copertina-font-size { font-size: clamp(37px, 9.6vw, 46px) !important; } }
+@media (prefers-reduced-motion: reduce) { .refe-copertina__scena::after { opacity: 0; } }

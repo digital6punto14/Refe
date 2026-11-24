@@ -1,0 +1,74 @@
+{
+    "key": "group_refe_testimonianza",
+    "title": "Testimonianza",
+    "fields": [
+        {
+            "key": "field_refe_testimonianza_citazione",
+            "label": "Citazione",
+            "name": "citazione",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 5,
+            "new_lines": ""
+        },
+        {
+            "key": "field_refe_testimonianza_ruolo",
+            "label": "Ruolo",
+            "name": "ruolo",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "key": "field_refe_testimonianza_segnaposto",
+            "label": "Segnaposto",
+            "name": "segnaposto",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Testimonianza ancora da definire",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "refe_testimonianza"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "modified": 1795478400
+}

@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "refe/ricerca",
+	"title": "Ricerca",
+	"category": "refe",
+	"icon": "search",
+	"description": "Pulsante che apre la ricerca in tutto il sito.",
+	"textdomain": "refe-core",
+	"attributes": {
+		"titolo": {
+			"type": "string",
+			"default": "Cerca nel sito",
+			"role": "content"
+		},
+		"etichetta": {
+			"type": "string",
+			"default": "Cosa stai cercando?",
+			"role": "content"
+		},
+		"esempio": {
+			"type": "string",
+			"default": "Metodo, attività, piattaforme…"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		},
+		"interactivity": true,
+		"multiple": false
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"file:./style-index.css"
+	],
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

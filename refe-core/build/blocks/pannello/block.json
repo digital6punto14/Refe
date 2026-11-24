@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/pannello",
+  "title": "Pannello",
+  "category": "refe",
+  "icon": "align-left",
+  "description": "Uno dei testi dei Pannelli a scorrimento.",
+  "textdomain": "refe-core",
+  "parent": [
+    "refe/pannelli"
+  ],
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "reusable": false,
+    "color": {
+      "text": true,
+      "background": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

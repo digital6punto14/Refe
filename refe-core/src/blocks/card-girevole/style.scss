@@ -1,0 +1,42 @@
+.wp-block-refe-card-girevole.refe-girevole { position: relative; display: grid; min-width: 0; margin-block: 0; }
+.refe-girevole__facce { display: grid; gap: 14px; perspective: 1000px; }
+.refe-faccia { position: relative; isolation: isolate; display: grid; align-content: start; gap: var(--refe-spazio, 16px); box-sizing: border-box; padding: 19px 20px; border: 1px solid #ffffff38; border-radius: 14px; overflow: hidden; color: #fff; background-color: var(--wp--preset--color--bright-blue, #002f87); }
+.refe-faccia::before { content: ""; position: absolute; z-index: -1; inset: -20% 4%; pointer-events: none; background: rgb(2 30 66 / .25); mask: url("../../img/simbolo.svg") center / contain no-repeat; }
+.filigrana-chiara .refe-faccia::before { background: rgb(220 227 236 / .25); }
+.filigrana-nessuna .refe-faccia::before { display: none; }
+.refe-faccia > * { margin-block: 0 !important; }
+.refe-faccia :is(h3, h4) { color: inherit; font-size: 18px; line-height: 1.2; }
+.refe-faccia h3 { font-weight: 500; letter-spacing: -.025em; margin-bottom: -11px !important; }
+.refe-faccia p { font-size: 14px; line-height: 1.45; }
+.refe-faccia h4 { margin-bottom: 5px !important; }
+.refe-faccia ul { display: grid; gap: 11px; padding: 0; list-style: none; }
+.refe-faccia li { border-top: 1px solid #ffffff55; padding-top: 8px; font-size: 14px; line-height: 1.35; }
+.refe-faccia li strong { display: block; margin-bottom: 3px; }
+.refe-faccia li br { display: none; }
+.refe-illustrazione { position: relative; justify-self: center; width: min(76%, 206px); aspect-ratio: 168 / 108; margin: 3px 6px 5px !important; rotate: -3deg; }
+.filigrana-chiara .refe-illustrazione { rotate: 3deg; }
+.refe-illustrazione > .wp-block-image { margin: 0; }
+.refe-illustrazione > .wp-block-image:first-child img { display: block; width: 100%; height: auto; }
+.refe-illustrazione > .wp-block-image + .wp-block-image { position: absolute; right: -8px; bottom: -8px; width: clamp(42px, 32%, 62px); }
+.refe-illustrazione > .wp-block-image + .wp-block-image img { display: block; box-sizing: border-box; width: 100%; height: auto; aspect-ratio: 1; padding: 7px; border: 1px solid #adc5e8; border-radius: 11px; background: #f2f6fc; object-fit: contain; }
+.refe-girevole.gira-pronta .refe-girevole__facce { gap: 0; }
+.gira-pronta .refe-faccia { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; transition: transform .46s cubic-bezier(.22, .61, .36, 1); }
+.gira-pronta .refe-faccia--fronte { transform: rotateY(0deg); }
+.gira-pronta .refe-faccia--retro, .gira-pronta.is-girata .refe-faccia--fronte { transform: rotateY(-180deg); }
+.gira-pronta.is-girata .refe-faccia--fronte { transform: rotateY(180deg); }
+.gira-pronta.is-girata .refe-faccia--retro { transform: rotateY(0deg); }
+.refe-girevole__gira:not([hidden]) { position: absolute; inset: 0; width: 100%; padding: 0; border: 0; border-radius: 14px; background: transparent; color: #fff; font: inherit; cursor: pointer; }
+.refe-girevole__gira:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.refe-girevole__nota { display: none; }
+.refe-girevole.is-style-grande .refe-faccia { min-height: 380px; }
+.refe-girevole.is-style-grande .refe-faccia h3 { font-size: 28px; font-weight: 700; }
+.refe-girevole.is-style-grande .refe-faccia--fronte p { font-size: 17px; }
+@media (min-width: 801px) { .refe-girevole.is-style-grande .refe-illustrazione { scale: 1.4; margin-top: 56px !important; } }
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+	.gira-pronta .refe-faccia { padding-bottom: 50px; }
+	.refe-girevole__nota { display: block; position: absolute; left: 20px; bottom: 15px; font-size: 12px; line-height: 1.35; text-align: left; }
+}
+.refe-fermo .gira-pronta .refe-faccia { transform: none; transition: none; }
+.refe-fermo .gira-pronta .refe-faccia[aria-hidden="true"] { visibility: hidden; }
+@media (prefers-reduced-motion: reduce) { .gira-pronta .refe-faccia { transform: none !important; transition: none; } .gira-pronta .refe-faccia[aria-hidden="true"] { visibility: hidden; } }
+.refe-faccia :is(h3, h4, p, li) { text-wrap: wrap; }

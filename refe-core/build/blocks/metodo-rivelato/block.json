@@ -1,0 +1,31 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/metodo-rivelato",
+  "title": "Metodo rivelato",
+  "category": "refe",
+  "icon": "visibility",
+  "description": "Un’immagine parte al centro, si sposta con lo scorrimento e rivela i testi.",
+  "textdomain": "refe-core",
+  "attributes": {
+    "immagine": {
+      "type": "object",
+      "default": {}
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

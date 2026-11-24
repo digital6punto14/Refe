@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "refe/news",
+  "title": "News",
+  "category": "refe",
+  "icon": "megaphone",
+  "description": "Griglia con filtri o striscia a scorrimento degli articoli.",
+  "textdomain": "refe-core",
+  "usesContext": [
+    "postId",
+    "postType"
+  ],
+  "attributes": {
+    "formato": {
+      "type": "string",
+      "default": "griglia"
+    },
+    "filtri": {
+      "type": "boolean",
+      "default": false
+    },
+    "quante": {
+      "type": "number",
+      "default": 0
+    },
+    "categoria": {
+      "type": "number",
+      "default": 0
+    },
+    "escludiCorrente": {
+      "type": "boolean",
+      "default": false
+    },
+    "durata": {
+      "type": "number",
+      "default": 28
+    },
+    "testoTutte": {
+      "type": "string",
+      "default": "Tutte"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "interactivity": true
+  },
+  "editorScript": "file:./index.js",
+  "style": [
+    "refe-comune",
+    "file:./style-index.css"
+  ],
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

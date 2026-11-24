@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "refe/testimonianze",
+	"title": "Testimonianze",
+	"category": "refe",
+	"icon": "format-quote",
+	"description": "Slider automatico delle testimonianze con un testo a fianco.",
+	"textdomain": "refe-core",
+	"attributes": {
+		"scelte": {
+			"type": "array",
+			"default": []
+		},
+		"quante": {
+			"type": "number",
+			"default": 0
+		},
+		"intervallo": {
+			"type": "number",
+			"default": 5200
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"refe-comune",
+		"file:./style-index.css"
+	],
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

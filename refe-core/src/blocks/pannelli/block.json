@@ -1,0 +1,38 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "refe/pannelli",
+	"title": "Pannelli a scorrimento",
+	"category": "refe",
+	"icon": "align-full-width",
+	"description": "L’immagine resta ferma e i testi si alternano con lo scorrimento.",
+	"textdomain": "refe-core",
+	"allowedBlocks": [
+		"refe/pannello"
+	],
+	"attributes": {
+		"immagine": {
+			"type": "object",
+			"default": {}
+		},
+		"linea": {
+			"type": "boolean",
+			"default": false
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"spacing": {
+			"margin": true,
+			"padding": true,
+			"blockGap": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": [
+		"file:./style-index.css"
+	],
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

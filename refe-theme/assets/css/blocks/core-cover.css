@@ -17,3 +17,6 @@
 .wp-block-cover.is-style-fascia h2 { font-size: clamp(28px, 2.8vw, 44px); }
 .wp-block-cover.is-style-fascia .refe-a-destra { margin-left: auto; }
 @media (max-width: 800px) { .wp-block-cover.is-style-testata { min-height: min(640px, 84svh); padding-top: 130px; } }
+/* Sezione con immagine di sfondo e velo. */
+.wp-block-cover.is-style-sezione { min-height: 0; padding: var(--wp--preset--spacing--sezione) var(--refe-margine); align-items: stretch; overflow: clip; }
+.wp-block-cover.is-style-sezione .wp-block-cover__inner-container { width: 100%; max-width: 1320px; }
