@@ -41,3 +41,5 @@ footer .refe-footer-su a::after { content: ""; width: 14px; height: 12px; backgr
   footer .refe-footer-fine { flex-direction: column; align-items: flex-start !important; gap: 14px 24px !important; font-size: 10px !important; }
 }
 @media (max-width: 480px) { header .wp-block-site-logo img, header .refe-logo img { width: 94px; } }
+/* Telefono: un titolo può andare su due righe, le linee sotto i titoli restano allineate. */
+@media (max-width: 440px) { footer .refe-footer-colonne > .wp-block-group:not(.refe-footer-recapiti) > h3 { box-sizing: border-box; display: flex; align-items: flex-end; min-height: 51px; } }
