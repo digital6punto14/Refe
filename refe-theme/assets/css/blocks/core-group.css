@@ -52,6 +52,6 @@
   .is-style-testata > .wp-block-columns > .wp-block-column:last-child:not(:has(.is-style-a-filo)) { order: -1; }
   .is-style-testata > .wp-block-columns img { max-width: 180px; }
   .is-style-testata > .wp-block-columns .is-style-a-filo img { max-width: none; }
-  .is-style-testata .wp-block-image { margin-inline: 0; }
+  .is-style-testata .wp-block-image, .is-style-testata .wp-block-image.aligncenter { margin-inline: 0 auto !important; }
 }
 @media (prefers-reduced-transparency: reduce) { :is(.is-style-vetro, .is-style-vetro-forte, .is-style-scheda) { background: var(--wp--preset--color--white-blue); } .is-style-vetro-scuro { background: var(--wp--preset--color--midnight-moon); } }
