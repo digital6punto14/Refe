@@ -5,3 +5,5 @@
 .is-style-schema-solar-ember .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--white); }
 .is-style-schema-white-blue .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--bright-blue); }
 .refe-fonte { opacity: .75; }
+/* Case study senza soluzione: niente etichetta vuota. */
+p.is-style-etichetta:empty { display: none; }

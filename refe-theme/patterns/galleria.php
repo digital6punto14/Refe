@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 <section class="wp-block-group alignfull is-style-schema-bright-blue" style="padding-top:var(--wp--preset--spacing--sezione);padding-bottom:var(--wp--preset--spacing--sezione)"><!-- wp:columns {"className":"refe-galleria"} -->
 <div class="wp-block-columns refe-galleria"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"lightbox":{"enabled":true},"sizeSlug":"full","linkDestination":"none"} -->
-<figure class="wp-block-image size-full"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/case-puglia.webp' ) ); ?>" alt="Immagine del progetto"/></figure>
+<figure class="wp-block-image size-full"><img alt=""/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

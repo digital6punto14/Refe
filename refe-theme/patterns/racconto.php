@@ -13,13 +13,13 @@ defined( 'ABSPATH' ) || exit;
 <section class="wp-block-group alignfull is-style-schema-white-blue refe-filigrana" style="padding-top:var(--wp--preset--spacing--sezione);padding-bottom:var(--wp--preset--spacing--sezione)"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%"><!-- wp:heading -->
-<h2 class="wp-block-heading">Tutta la Puglia che c’è. La differenza si vede</h2>
+<h2 class="wp-block-heading">Titolo del racconto</h2>
 <!-- /wp:heading --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%"><!-- wp:paragraph {"fontSize":"lettura"} -->
-<p class="has-lettura-font-size">Il portale OpenReport® collega gli impegni della Regione alle politiche realizzate e al valore pubblico generato, rendendo risultati e impatti accessibili ai cittadini e agli stakeholder.</p>
+<p class="has-lettura-font-size">Racconta il progetto in due o tre righe: il cliente, l’obiettivo, che cosa è cambiato.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -37,12 +37,12 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- wp:column {"width":"60%"} -->
 <div class="wp-block-column" style="flex-basis:60%"><!-- wp:paragraph {"fontSize":"lettura"} -->
-<p class="has-lettura-font-size">Un percorso partecipato di rendicontazione mette in relazione azione regionale, sviluppo sostenibile e pari opportunità.</p>
+<p class="has-lettura-font-size">Descrivi il percorso: come si è lavorato, con chi e in quali fasi.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-secondario"} -->
-<div class="wp-block-button is-style-secondario"><a class="wp-block-button__link wp-element-button" href="https://www.csroggi.org/refe-e-la-sfida-della-twin-transition/">Il racconto del progetto</a></div>
+<div class="wp-block-buttons"><!-- wp:button {"metadata":{"bindings":{"url":{"source":"refe/campo","args":{"campo":"link_url"}},"text":{"source":"refe/campo","args":{"campo":"link_testo"}}}},"className":"is-style-secondario"} -->
+<div class="wp-block-button is-style-secondario"><a class="wp-block-button__link wp-element-button" href="#" target="_blank" rel="noopener">Il racconto del progetto</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
