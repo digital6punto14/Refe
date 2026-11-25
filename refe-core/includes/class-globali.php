@@ -30,10 +30,12 @@ final class Globali {
 		$imp = Impostazioni::tutte()['animazioni'];
 		if ( $imp['cursore'] ) {
 			wp_enqueue_style( 'refe-cursore', REFE_CORE_URL . 'assets/css/cursore.css', array(), Blocchi::versione( 'assets/css/cursore.css' ), '(hover: hover) and (pointer: fine)' );
+			wp_style_add_data( 'refe-cursore', 'path', REFE_CORE_DIR . 'assets/css/cursore.css' );
 			wp_enqueue_script_module( Blocchi::modulo( 'cursore' ) );
 		}
 		if ( $imp['passaggio'] ) {
 			wp_enqueue_style( 'refe-passaggio', REFE_CORE_URL . 'assets/css/passaggio.css', array(), Blocchi::versione( 'assets/css/passaggio.css' ) );
+			wp_style_add_data( 'refe-passaggio', 'path', REFE_CORE_DIR . 'assets/css/passaggio.css' );
 		}
 	}
 

@@ -18,7 +18,7 @@ if ( function_exists( 'wp_high_priority_element_flag' ) ) {
 	wp_high_priority_element_flag( false );
 	wp_increase_content_media_count( 10 );
 }
-$refe_sfondo  = $attributes['sfondo'] && \Refe\Core\Impostazioni::valore( 'animazioni', 'copertina' );
+$refe_sfondo = $attributes['sfondo'] && \Refe\Core\Impostazioni::valore( 'animazioni', 'copertina' );
 ?>
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-copertina' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="refe-copertina__scena">

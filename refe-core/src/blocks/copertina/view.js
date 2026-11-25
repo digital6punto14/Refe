@@ -267,7 +267,10 @@ function avvia() {
 	scena.classList.add( 'loop-pronto' );
 	pausa();
 	misura();
-	document.fonts?.ready.then( misura );
+	( document.fonts?.ready || Promise.resolve() ).then( () => {
+		misura();
+		scena.classList.add( 'collocata' );
+	} );
 	if ( document.readyState === 'complete' ) {
 		caricaVideo();
 	} else {

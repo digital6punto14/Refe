@@ -48,6 +48,7 @@ function refe_theme_enqueue(): void {
 	$css = 'assets/css/base.css';
 	$js  = 'assets/js/testata.js';
 	wp_enqueue_style( 'refe-theme-base', get_theme_file_uri( $css ), array(), (string) filemtime( get_theme_file_path( $css ) ) );
+	wp_style_add_data( 'refe-theme-base', 'path', get_theme_file_path( $css ) );
 	wp_enqueue_script( 'refe-theme-testata', get_theme_file_uri( $js ), array(), (string) filemtime( get_theme_file_path( $js ) ), array( 'strategy' => 'defer' ) );
 }
 add_action( 'wp_enqueue_scripts', 'refe_theme_enqueue' );

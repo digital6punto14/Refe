@@ -12,24 +12,24 @@ defined( 'ABSPATH' ) || exit;
  */
 function refe_contenuti_pagine(): array {
 	return array(
-		'home'                  => array( 'Home', '', 'home' ),
-		'chi-siamo'             => array( 'Chi siamo', '', 'chi-siamo' ),
-		'team'                  => array( 'Il team', 'chi-siamo', 'team' ),
-		'storia'                => array( 'La storia di Refe', 'chi-siamo', 'storia', '20 anni di Refe' ),
-		'lavora-con-noi'        => array( 'Lavora con noi', 'chi-siamo', 'lavora-con-noi', 'Jobs' ),
-		'servizi'               => array( 'Servizi', '', 'servizi' ),
-		'metodo'                => array( 'Il metodo', 'servizi', 'metodo' ),
-		'attivita'              => array( 'Attività', 'servizi', 'attivita' ),
+		'home'                   => array( 'Home', '', 'home' ),
+		'chi-siamo'              => array( 'Chi siamo', '', 'chi-siamo' ),
+		'team'                   => array( 'Il team', 'chi-siamo', 'team' ),
+		'storia'                 => array( 'La storia di Refe', 'chi-siamo', 'storia', '20 anni di Refe' ),
+		'lavora-con-noi'         => array( 'Lavora con noi', 'chi-siamo', 'lavora-con-noi', 'Jobs' ),
+		'servizi'                => array( 'Servizi', '', 'servizi' ),
+		'metodo'                 => array( 'Il metodo', 'servizi', 'metodo' ),
+		'attivita'               => array( 'Attività', 'servizi', 'attivita' ),
 		'sostenibilita-digitale' => array( 'Sostenibilità digitale', 'servizi', 'sostenibilita-digitale' ),
-		'perform'               => array( 'Perform+', 'sostenibilita-digitale', 'perform' ),
-		'openreport'            => array( 'OpenReport®', 'sostenibilita-digitale', 'openreport' ),
-		'videocorso'            => array( 'Videocorso', 'servizi', 'videocorso' ),
-		'case-studies'          => array( 'Case studies', '', 'case-studies' ),
-		'clienti'               => array( 'Clienti', '', 'clienti' ),
-		'news'                  => array( 'News', '', 'news' ),
-		'contatti'              => array( 'Contatti', '', 'contatti' ),
-		'privacy'               => array( 'Privacy Policy', '', 'privacy-policy' ),
-		'cookie'                => array( 'Cookie Policy', '', 'cookie-policy' ),
+		'perform'                => array( 'Perform+', 'sostenibilita-digitale', 'perform' ),
+		'openreport'             => array( 'OpenReport®', 'sostenibilita-digitale', 'openreport' ),
+		'videocorso'             => array( 'Videocorso', 'servizi', 'videocorso' ),
+		'case-studies'           => array( 'Case studies', '', 'case-studies' ),
+		'clienti'                => array( 'Clienti', '', 'clienti' ),
+		'news'                   => array( 'News', '', 'news' ),
+		'contatti'               => array( 'Contatti', '', 'contatti' ),
+		'privacy'                => array( 'Privacy Policy', '', 'privacy-policy' ),
+		'cookie'                 => array( 'Cookie Policy', '', 'cookie-policy' ),
 	);
 }
 
@@ -85,7 +85,7 @@ function refe_contenuti_importa( bool $riscrivi = true ): array {
 	// Pagine vuote, per avere indirizzi e ID.
 	$pagine = array();
 	foreach ( refe_contenuti_pagine() as $chiave => $d ) {
-		$dati = array(
+		$dati               = array(
 			'post_title'     => $d[0],
 			'post_name'      => $d[2],
 			'post_parent'    => $pagine[ $d[1] ] ?? 0,
@@ -114,9 +114,9 @@ function refe_contenuti_importa( bool $riscrivi = true ): array {
 	}
 
 	// Modulo.
-	$modulo                              = refe_contenuti_modulo( get_permalink( $pagine['privacy'] ) );
-	$mappa['id'][ $codici['modulo'] ]    = $modulo['id'];
-	$mappa['hash']                       = $modulo['hash'];
+	$modulo                           = refe_contenuti_modulo( get_permalink( $pagine['privacy'] ) );
+	$mappa['id'][ $codici['modulo'] ] = $modulo['id'];
+	$mappa['hash']                    = $modulo['hash'];
 
 	// Pattern sincronizzati.
 	foreach ( $codici['blocchi'] as $nome => $codice ) {

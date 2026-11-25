@@ -9,6 +9,9 @@
 .refe-copertina__posto.sopra { right: auto; bottom: auto; }
 .refe-copertina__venti { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity .3s ease; }
 .refe-copertina__video { position: absolute; left: -7%; top: -7.5%; width: 114%; height: 115%; max-width: none; object-fit: contain; transition: opacity .25s ease; }
+/* Il simbolo si mostra quando il suo posto è calcolato: così la pagina non salta. */
+.refe-copertina__scena:not(.collocata) :is(.refe-copertina__posto, .refe-copertina__simbolo) { visibility: hidden; }
+.refe-copertina__scena:not(.con-video) .refe-copertina__video { display: none; }
 .con-video .refe-copertina__venti { display: none; }
 .staccato .refe-copertina__video { opacity: 0; }
 .con-video:not(.staccato) .refe-copertina__simbolo { opacity: 0 !important; }

@@ -83,7 +83,11 @@ final class Collegamenti {
 		$e    = array_map( 'esc_html', $a );
 		$tel  = preg_replace( '/[^0-9+]/', '', $a['telefono'] );
 		$tel  = $tel && ! str_starts_with( $tel, '+' ) ? '+39' . $tel : $tel;
-		$voce = static fn( string $etichetta, string $html, string $url = '' ): array => compact( 'etichetta', 'html', 'url' );
+		$voce = static fn( string $etichetta, string $html, string $url = '' ): array => array(
+			'etichetta' => $etichetta,
+			'html'      => $html,
+			'url'       => $url,
+		);
 		return array(
 			'nome'               => $voce( __( 'Ragione sociale', 'refe-core' ), $e['nome'] ),
 			'piva'               => $voce( __( 'Partita IVA', 'refe-core' ), $e['piva'] ),

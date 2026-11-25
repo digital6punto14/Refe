@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Refe — contenuti demo
  * Description:       Importatore dei contenuti della demo. Si lancia una volta da Strumenti e poi si elimina: i contenuti restano.
- * Version:           0.4.0
+ * Version:           0.6.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Author:            6.14
@@ -16,6 +16,7 @@ defined( 'ABSPATH' ) || exit;
 
 define( 'REFE_CONTENUTI_DIR', plugin_dir_path( __FILE__ ) );
 
+require_once REFE_CONTENUTI_DIR . 'includes/class-refe-contenuti-stato.php';
 require_once REFE_CONTENUTI_DIR . 'includes/funzioni.php';
 require_once REFE_CONTENUTI_DIR . 'includes/schede.php';
 require_once REFE_CONTENUTI_DIR . 'includes/modulo.php';

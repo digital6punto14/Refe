@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 <!-- wp:group {"align":"full","className":"is-style-testata","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
-<div class="wp-block-group alignfull is-style-testata"><!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"clamp(28px, 5vw, 80px)"}}}} -->
+<div class="wp-block-group alignfull is-style-testata"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"clamp(28px, 5vw, 80px)","left":"clamp(28px, 5vw, 80px)"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"bottom","width":"55.1%"} -->
 <div class="wp-block-column is-vertically-aligned-bottom" style="flex-basis:55.1%"><!-- wp:yoast-seo/breadcrumbs /-->
 

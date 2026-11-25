@@ -19,8 +19,14 @@ if ( ! $refe_risultati ) {
 	echo Plugin::vuoto( __( 'I risultati si scrivono nei campi «Dati del case study», sotto il contenuto. Finché sono vuoti, la sezione non si vede sul sito.', 'refe-core' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	return;
 }
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-risultati' . ( $refe_seg ? ' is-segnaposto' : '' ),
+		'style' => Blocchi::spazio( $attributes ),
+	)
+);
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-risultati' . ( $refe_seg ? ' is-segnaposto' : '' ), 'style' => Blocchi::spazio( $attributes ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<?php if ( $refe_seg ) : ?>
 		<p class="is-style-nota"><?php esc_html_e( 'Dati da definire con Refe', 'refe-core' ); ?></p>
 	<?php endif; ?>

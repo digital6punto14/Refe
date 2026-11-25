@@ -39,7 +39,11 @@ foreach ( $refe_articoli as $refe_a ) {
 }
 ksort( $refe_categorie );
 Filtri::stato();
-$refe_contesto = Filtri::contesto( $refe_voci, __( '%d notizia visualizzata', 'refe-core' ), __( '%d notizie visualizzate', 'refe-core' ) );
+/* translators: %d: quanti elementi. */
+$refe_uno = __( '%d notizia visualizzata', 'refe-core' );
+/* translators: %d: quanti elementi. */
+$refe_molti    = __( '%d notizie visualizzate', 'refe-core' );
+$refe_contesto = Filtri::contesto( $refe_voci, $refe_uno, $refe_molti );
 $refe_wrapper  = get_block_wrapper_attributes(
 	array(
 		'class' => 'refe-news is-' . ( $refe_striscia ? 'striscia' : 'griglia' ),

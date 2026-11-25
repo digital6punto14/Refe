@@ -40,16 +40,16 @@ final class Contenuti {
 		register_post_type(
 			self::CASE,
 			array(
-				'labels'       => self::etichette( __( 'Case studies', 'refe-core' ), __( 'Case study', 'refe-core' ), __( 'Aggiungi case study', 'refe-core' ), __( 'Modifica case study', 'refe-core' ) ),
-				'public'       => true,
-				'has_archive'  => false,
-				'show_in_rest' => true,
-				'rest_base'    => 'case-studies',
-				'menu_icon'    => 'dashicons-portfolio',
+				'labels'        => self::etichette( __( 'Case studies', 'refe-core' ), __( 'Case study', 'refe-core' ), __( 'Aggiungi case study', 'refe-core' ), __( 'Modifica case study', 'refe-core' ) ),
+				'public'        => true,
+				'has_archive'   => false,
+				'show_in_rest'  => true,
+				'rest_base'     => 'case-studies',
+				'menu_icon'     => 'dashicons-portfolio',
 				'menu_position' => 21,
-				'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author', 'page-attributes', 'revisions', 'custom-fields' ),
-				'taxonomies'   => array( self::TIPO_CLIENTE, self::SOLUZIONE ),
-				'rewrite'      => array(
+				'supports'      => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author', 'page-attributes', 'revisions', 'custom-fields' ),
+				'taxonomies'    => array( self::TIPO_CLIENTE, self::SOLUZIONE ),
+				'rewrite'       => array(
 					'slug'       => 'case-studies',
 					'with_front' => false,
 				),
@@ -58,7 +58,7 @@ final class Contenuti {
 				 *
 				 * @param array $modello Blocchi.
 				 */
-				'template'     => apply_filters(
+				'template'      => apply_filters(
 					'refe_core_modello_case',
 					array(
 						array( 'core/pattern', array( 'slug' => 'refe-theme/racconto' ) ),

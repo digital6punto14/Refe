@@ -15,10 +15,16 @@ $refe_quanti = count( $block->inner_blocks );
 if ( ! $refe_quanti ) {
 	return;
 }
-$refe_immagine = $attributes['immagine'];
-$refe_linea    = $attributes['linea'] && \Refe\Core\Impostazioni::valore( 'animazioni', 'linea' );
+$refe_immagine  = $attributes['immagine'];
+$refe_linea     = $attributes['linea'] && \Refe\Core\Impostazioni::valore( 'animazioni', 'linea' );
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-pannelli' . ( $refe_linea ? ' con-linea' : '' ),
+		'style' => \Refe\Core\Blocchi::spazio( $attributes ) . '--n:' . $refe_quanti,
+	)
+);
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-pannelli' . ( $refe_linea ? ' con-linea' : '' ), 'style' => \Refe\Core\Blocchi::spazio( $attributes ) . '--n:' . $refe_quanti ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<div class="refe-pannelli__scena">
 		<?php if ( ! empty( $refe_immagine['url'] ) ) : ?>
 			<img class="refe-pannelli__immagine" src="<?php echo esc_url( $refe_immagine['url'] ); ?>" alt="<?php echo esc_attr( $refe_immagine['alt'] ?? '' ); ?>" width="300" height="300" loading="lazy">

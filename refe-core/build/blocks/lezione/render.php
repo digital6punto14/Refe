@@ -16,8 +16,8 @@ if ( '' === trim( $refe_titolo ) ) {
 	return;
 }
 static $refe_prima = true;
-$refe_lettore = Video::lettore( $attributes['link'] );
-$refe_video   = $refe_lettore ? $refe_lettore : ( $attributes['file']['url'] ?? '' );
+$refe_lettore      = Video::lettore( $attributes['link'] );
+$refe_video        = $refe_lettore ? $refe_lettore : ( $attributes['file']['url'] ?? '' );
 ?>
 <li class="refe-lezione">
 	<?php /* translators: %s: titolo della lezione. */ ?>

@@ -30,7 +30,11 @@ foreach ( $refe_progetti as $refe_p ) {
 ksort( $refe_tipi );
 $refe_filtri = $attributes['filtri'] && count( $refe_tipi ) > 1;
 Filtri::stato();
-$refe_contesto = Filtri::contesto( $refe_voci, __( '%d progetto visualizzato', 'refe-core' ), __( '%d progetti visualizzati', 'refe-core' ) );
+/* translators: %d: quanti elementi. */
+$refe_uno = __( '%d progetto visualizzato', 'refe-core' );
+/* translators: %d: quanti elementi. */
+$refe_molti    = __( '%d progetti visualizzati', 'refe-core' );
+$refe_contesto = Filtri::contesto( $refe_voci, $refe_uno, $refe_molti );
 $refe_wrapper  = get_block_wrapper_attributes(
 	array(
 		'class' => 'refe-progetti is-' . ( $refe_carosello ? 'carosello' : 'griglia' ),
@@ -56,7 +60,16 @@ $refe_wrapper  = get_block_wrapper_attributes(
 			?>
 			<li data-voce data-wp-bind--hidden="state.nascosto" <?php echo wp_interactivity_data_wp_context( array( 'categorie' => $refe_voci[ $refe_i ] ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 				<a class="refe-progetto" href="<?php echo esc_url( get_permalink( $refe_p ) ); ?>">
-					<?php echo get_the_post_thumbnail( $refe_p, 'large', array( 'alt' => '', 'sizes' => $refe_carosello ? '(max-width: 800px) 82vw, 30vw' : '(max-width: 800px) 100vw, 50vw' ) ); ?>
+					<?php
+					echo get_the_post_thumbnail(
+						$refe_p,
+						'large',
+						array(
+							'alt'   => '',
+							'sizes' => $refe_carosello ? '(max-width: 800px) 82vw, 30vw' : '(max-width: 800px) 100vw, 50vw',
+						)
+					);
+					?>
 					<span class="refe-progetto__info">
 						<?php if ( '' !== $refe_etichetta ) : ?>
 							<span class="refe-progetto__etichetta"><?php echo esc_html( $refe_etichetta ); ?></span>

@@ -23,9 +23,15 @@ if ( ! $refe_lezioni ) {
 	return;
 }
 /* translators: 1: lezioni completate, 2: lezioni totali. */
-$refe_conto = __( '%1$d di %2$d lezioni completate', 'refe-core' );
+$refe_conto     = __( '%1$d di %2$d lezioni completate', 'refe-core' );
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-corso',
+		'style' => Blocchi::spazio( $attributes ),
+	)
+);
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-corso', 'style' => Blocchi::spazio( $attributes ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> data-corso="<?php echo esc_attr( 'refe-corso-' . get_the_ID() ); ?>" data-manca="<?php esc_attr_e( 'Video da inserire', 'refe-core' ); ?>" data-conto="<?php echo esc_attr( $refe_conto ); ?>">
+<div <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>data-corso="<?php echo esc_attr( 'refe-corso-' . get_the_ID() ); ?>" data-manca="<?php esc_attr_e( 'Video da inserire', 'refe-core' ); ?>" data-conto="<?php echo esc_attr( $refe_conto ); ?>">
 	<div class="refe-corso__lettore">
 		<?php if ( ! empty( $attributes['immagine']['url'] ) ) : ?>
 			<img src="<?php echo esc_url( $attributes['immagine']['url'] ); ?>" alt="" loading="lazy">

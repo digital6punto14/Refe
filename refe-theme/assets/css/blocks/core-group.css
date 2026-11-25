@@ -62,3 +62,9 @@
 .is-style-testata .wp-block-post-excerpt__excerpt { margin: 0; }
 .is-style-testata :is(p, .wp-block-post-excerpt) + .is-style-etichetta { margin-top: 18px; }
 @media (max-width: 800px) { .refe-cielo > h2 br { display: none; } }
+.is-style-testata :is(p, .wp-block-post-excerpt) + .wp-block-buttons { margin-block-start: 28px !important; }
+@media (max-width: 800px) {
+  .is-style-testata > .wp-block-columns { row-gap: clamp(28px, 5vw, 80px) !important; }
+  .is-style-testata .is-style-mattonella { width: min(100%, 310px); }
+  .is-style-testata .is-style-mattonella img { width: 100% !important; max-width: none; }
+}

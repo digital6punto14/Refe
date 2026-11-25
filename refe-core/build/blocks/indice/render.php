@@ -20,8 +20,14 @@ if ( count( $refe_voci ) < 2 ) {
 	echo Plugin::vuoto( __( 'L’indice si compone da solo quando la pagina ha almeno due titoli di livello 2.', 'refe-core' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	return;
 }
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class'      => 'refe-indice is-style-vetro',
+		'aria-label' => wp_strip_all_tags( $attributes['titolo'] ),
+	)
+);
 ?>
-<nav <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-indice is-style-vetro', 'aria-label' => wp_strip_all_tags( $attributes['titolo'] ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<nav <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<strong><?php echo esc_html( wp_strip_all_tags( $attributes['titolo'] ) ); ?></strong>
 	<?php foreach ( $refe_voci as $refe_v ) : ?>
 		<a href="#<?php echo esc_attr( $refe_v['id'] ); ?>"><?php echo esc_html( $refe_v['testo'] ); ?></a>

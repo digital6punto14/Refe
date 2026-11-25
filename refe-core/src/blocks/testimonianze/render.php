@@ -37,8 +37,14 @@ if ( '' === trim( $content ) ) {
 	echo $refe_slider; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Composto sopra.
 	return;
 }
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-voci',
+		'style' => Blocchi::spazio( $attributes ),
+	)
+);
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-voci', 'style' => Blocchi::spazio( $attributes ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<div class="refe-voci__testo"><?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Blocchi già resi. ?></div>
 	<?php echo $refe_slider; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Composto sopra. ?>
 </div>

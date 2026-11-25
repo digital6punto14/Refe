@@ -47,22 +47,22 @@ final class Dati {
 	public static function azienda(): array {
 		$a = Impostazioni::tutte()['azienda'];
 		return array(
-			'nome'      => get_bloginfo( 'name' ),
+			'nome'            => get_bloginfo( 'name' ),
 			'ragione_sociale' => $a['nome'],
-			'descrizione' => get_bloginfo( 'description' ),
-			'partita_iva' => $a['piva'],
-			'fondazione' => $a['anno'],
-			'indirizzo' => array(
+			'descrizione'     => get_bloginfo( 'description' ),
+			'partita_iva'     => $a['piva'],
+			'fondazione'      => $a['anno'],
+			'indirizzo'       => array(
 				'via'       => $a['indirizzo'],
 				'cap'       => $a['cap'],
 				'citta'     => $a['citta'],
 				'provincia' => $a['provincia'],
 				'paese'     => 'IT',
 			),
-			'telefono'  => $a['telefono'],
-			'email'     => $a['email'],
-			'sito'      => home_url( '/' ),
-			'profili'   => array_values( array_filter( array( $a['linkedin'], $a['instagram'] ) ) ),
+			'telefono'        => $a['telefono'],
+			'email'           => $a['email'],
+			'sito'            => home_url( '/' ),
+			'profili'         => array_values( array_filter( array( $a['linkedin'], $a['instagram'] ) ) ),
 		);
 	}
 
@@ -156,12 +156,12 @@ final class Dati {
 			static fn( \WP_Post $p ): array => array( 'tipo' => Collegamenti::tipo( $p->ID ) ) + self::scheda( $p ),
 			get_posts(
 				array(
-					'post_type'   => array( 'page', 'post', Contenuti::CASE ),
-					'post_status' => 'publish',
+					'post_type'    => array( 'page', 'post', Contenuti::CASE ),
+					'post_status'  => 'publish',
 					'has_password' => false,
-					's'           => $testo,
-					'numberposts' => max( 1, min( 50, $quanti ) ),
-					'orderby'     => 'relevance',
+					's'            => $testo,
+					'numberposts'  => max( 1, min( 50, $quanti ) ),
+					'orderby'      => 'relevance',
 				)
 			)
 		);

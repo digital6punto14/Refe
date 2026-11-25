@@ -39,7 +39,7 @@ final class Theme_Bridge {
 			}
 		}
 		if ( $imp['caratteri'] !== $base['caratteri'] ) {
-			$nuovi['styles']['typography']['fontFamily']                      = 'var:preset|font-family|' . $imp['caratteri']['testo'];
+			$nuovi['styles']['typography']['fontFamily']                        = 'var:preset|font-family|' . $imp['caratteri']['testo'];
 			$nuovi['styles']['elements']['heading']['typography']['fontFamily'] = 'var:preset|font-family|' . $imp['caratteri']['titoli'];
 		}
 		return count( $nuovi ) > 1 ? $dati->update_with( $nuovi ) : $dati;

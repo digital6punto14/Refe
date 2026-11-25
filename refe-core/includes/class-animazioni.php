@@ -148,6 +148,7 @@ final class Animazioni {
 	 */
 	public static function carica(): void {
 		wp_enqueue_style( 'refe-animazioni', REFE_CORE_URL . 'assets/css/animazioni.css', array(), Blocchi::versione( 'assets/css/animazioni.css' ) );
+		wp_style_add_data( 'refe-animazioni', 'path', REFE_CORE_DIR . 'assets/css/animazioni.css' );
 		wp_enqueue_script_module( Blocchi::modulo( 'animazioni' ) );
 	}
 

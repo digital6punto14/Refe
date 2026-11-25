@@ -10,9 +10,15 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$refe_immagine = $attributes['immagine'];
+$refe_immagine  = $attributes['immagine'];
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-metodo' . ( empty( $refe_immagine['url'] ) ? ' is-fermo' : '' ),
+		'style' => \Refe\Core\Blocchi::spazio( $attributes ),
+	)
+);
 ?>
-<div <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-metodo' . ( empty( $refe_immagine['url'] ) ? ' is-fermo' : '' ), 'style' => \Refe\Core\Blocchi::spazio( $attributes ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<div class="refe-metodo__perno">
 		<div class="refe-metodo__scena">
 			<?php if ( ! empty( $refe_immagine['url'] ) ) : ?>

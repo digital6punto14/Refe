@@ -38,7 +38,7 @@ footer .refe-footer-su a::after { content: ""; width: 14px; height: 12px; backgr
   footer .refe-footer-colonne > .wp-block-group { min-height: 208px; }
   footer .refe-footer-colonne > .refe-footer-recapiti { grid-column: span 2; align-items: flex-start; text-align: left; min-height: 219px; }
   footer .refe-footer-recapiti h3 + p { padding-top: 0; }
-  footer .refe-footer-fine { flex-direction: column; align-items: flex-start !important; gap: 14px 24px !important; font-size: 10px !important; }
+  footer .refe-footer-fine { gap: 14px 24px !important; font-size: 10px !important; }
 }
 @media (max-width: 480px) { header .wp-block-site-logo img, header .refe-logo img { width: 94px; } }
 /* Telefono: un titolo può andare su due righe, le linee sotto i titoli restano allineate. */
@@ -46,3 +46,7 @@ footer .refe-footer-su a::after { content: ""; width: 14px; height: 12px; backgr
 /* Telefono: pulsante della testata più piccolo, alto come l'icona del menu. */
 @media (max-width: 800px) { header.wp-block-template-part > .wp-block-group:not(.refe-ridotta) .wp-block-buttons .wp-block-button__link:not(.refe-pannello *) { min-height: 40px; padding: 8px 14px; font-size: 12px; line-height: 20px; border-radius: 8px; } }
 footer .is-style-elenco-footer a[aria-current="page"] { color: var(--wp--preset--color--solar-ember); }
+@media (max-width: 510px) { footer .refe-footer-fine { flex-direction: column; align-items: flex-start !important; } }
+footer .refe-footer-fine { border-top: 1px solid #2f6cff; }
+footer .refe-footer-fine .wp-block-social-link .wp-block-social-link-anchor { padding: 4px !important; }
+footer .refe-footer-fine .wp-block-social-links { margin-inline: -4px !important; gap: 20px !important; }

@@ -16,8 +16,14 @@ if ( ! $refe_persone ) {
 	echo Plugin::vuoto( __( 'Nessuna persona: aggiungile dal menu Persone.', 'refe-core' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	return;
 }
+$refe_attributi = get_block_wrapper_attributes(
+	array(
+		'class' => 'refe-persone',
+		'style' => Blocchi::spazio( $attributes ),
+	)
+);
 ?>
-<ul <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-persone', 'style' => Blocchi::spazio( $attributes ) ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<ul <?php echo $refe_attributi; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Attributi composti da WordPress. ?>>
 	<?php foreach ( $refe_persone as $refe_p ) : ?>
 		<?php
 		$refe_nome  = get_the_title( $refe_p );
@@ -36,7 +42,14 @@ if ( ! $refe_persone ) {
 				<div class="refe-persona__faccia refe-persona__fronte">
 					<?php
 					if ( has_post_thumbnail( $refe_p ) ) {
-						echo get_the_post_thumbnail( $refe_p, 'large', array( 'alt' => $refe_nome, 'sizes' => '(max-width: 800px) 100vw, 25vw' ) );
+						echo get_the_post_thumbnail(
+							$refe_p,
+							'large',
+							array(
+								'alt'   => $refe_nome,
+								'sizes' => '(max-width: 800px) 100vw, 25vw',
+							)
+						);
 					} elseif ( $refe_seg ) {
 						echo '<span class="refe-persona__nota refe-persona__manca">' . esc_html__( 'Foto da inserire', 'refe-core' ) . '</span>';
 					}
