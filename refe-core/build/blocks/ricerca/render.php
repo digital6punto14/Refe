@@ -40,7 +40,7 @@ $refe_id = wp_unique_id( 'refe-ricerca-' );
 	<button type="button" class="refe-ricerca__apri" aria-label="<?php echo esc_attr( $attributes['titolo'] ); ?>" aria-haspopup="dialog" data-wp-on--click="actions.apri"></button>
 	<dialog class="refe-ricerca__finestra" aria-labelledby="<?php echo esc_attr( $refe_id ); ?>-titolo" data-wp-on--click="actions.fuori" data-wp-on--close="actions.chiuso">
 		<button type="button" class="refe-ricerca__chiudi" aria-label="<?php esc_attr_e( 'Chiudi ricerca', 'refe-core' ); ?>" data-wp-on--click="actions.chiudi">✕</button>
-		<h2 id="<?php echo esc_attr( $refe_id ); ?>-titolo"><?php echo esc_html( $attributes['titolo'] ); ?></h2>
+		<p class="refe-ricerca__titolo" id="<?php echo esc_attr( $refe_id ); ?>-titolo"><?php echo esc_html( $attributes['titolo'] ); ?></p>
 		<form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 			<label for="<?php echo esc_attr( $refe_id ); ?>-campo"><?php echo esc_html( $attributes['etichetta'] ); ?></label>
 			<input id="<?php echo esc_attr( $refe_id ); ?>-campo" type="search" name="s" placeholder="<?php echo esc_attr( $attributes['esempio'] ); ?>" autocomplete="off" data-wp-on--input="actions.scrivi">

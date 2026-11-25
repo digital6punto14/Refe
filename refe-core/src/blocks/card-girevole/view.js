@@ -17,8 +17,10 @@ document.querySelectorAll( '.refe-girevole' ).forEach( ( scheda ) => {
 		fronte.setAttribute( 'aria-hidden', String( si ) );
 		retro.setAttribute( 'aria-hidden', String( ! si ) );
 		gira.setAttribute( 'aria-expanded', String( si ) );
-		gira.setAttribute( 'aria-label', si ? gira.dataset.chiudi : gira.dataset.apri );
-		gira.firstElementChild.textContent = tocco.matches ? ( si ? gira.dataset.torna : gira.dataset.tocca ) : si ? gira.dataset.fronte : gira.dataset.retro;
+		const nota = gira.firstElementChild;
+		nota.textContent = tocco.matches ? ( si ? gira.dataset.torna : gira.dataset.tocca ) : si ? gira.dataset.fronte : gira.dataset.retro;
+		// Il nome accessibile contiene il testo visibile.
+		gira.setAttribute( 'aria-label', `${ nota.textContent }. ${ si ? gira.dataset.chiudi : gira.dataset.apri }` );
 	}
 	mostra( false );
 	scheda.classList.add( 'gira-pronta' );

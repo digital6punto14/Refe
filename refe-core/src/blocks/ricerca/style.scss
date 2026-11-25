@@ -3,7 +3,7 @@
 header.su-arancione .refe-ricerca__apri { filter: brightness(0) invert(1); }
 .refe-ricerca__finestra { box-sizing: border-box; width: min(720px, 100% - 32px); max-height: 85svh; padding: 55px; border: 0; border-radius: 28px; overflow: auto; background: var(--wp--preset--color--white-blue, #dce3ec); color: #09254b; box-shadow: 0 25px 100px rgb(2 30 66 / .25); pointer-events: auto; }
 .refe-ricerca__finestra::backdrop { background: rgb(2 30 66 / .55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
-.refe-ricerca__finestra h2 { margin: 0 0 25px; padding-right: 10px; color: inherit; font-size: clamp(31.58px, calc(28.71px + .7178vi), 37.9px); font-weight: 500; line-height: 1.13; letter-spacing: -.025em; }
+.refe-ricerca__titolo { margin: 0 0 25px; padding-right: 10px; color: inherit; font-size: clamp(31.58px, calc(28.71px + .7178vi), 37.9px); font-weight: 500; line-height: 1.13; letter-spacing: -.025em; }
 .refe-ricerca__finestra label { display: block; margin-bottom: 10px; font-size: 14px; }
 .refe-ricerca__finestra input { box-sizing: border-box; width: 100%; padding: 13px; border: 1px solid #748398; border-radius: 8px; background: #fff; color: #14284c; font: inherit; }
 .refe-ricerca__chiudi { position: absolute; top: 20px; right: 20px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #e2e9f3; color: inherit; font-size: 17px; cursor: pointer; }

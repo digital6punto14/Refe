@@ -19,8 +19,8 @@ footer.wp-block-template-part a:hover { color: #ff9561; }
 .refe-errore { min-height: 90svh; }
 .refe-torna .wp-block-button__link { min-height: 48px; }
 footer .refe-footer-colonne > .wp-block-group { min-height: 267px; }
-footer .refe-footer-legali { width: min(100%, 214px); margin-top: 14px; padding-top: 24px; border-top: 1px solid #2f6cff; display: grid; gap: 2px; }
-footer .refe-footer-legali a { padding: 0; font-size: 14px; line-height: 21px; text-transform: none; color: var(--wp--preset--color--bright-blue-pale); }
+footer .refe-footer-legali { width: min(100%, 214px); margin-top: 14px; padding-top: 24px; border-top: 1px solid #2f6cff; display: grid; gap: 0; }
+footer .refe-footer-legali a { padding: 2px 0; font-size: 14px; line-height: 21px; text-transform: none; color: var(--wp--preset--color--bright-blue-pale); }
 footer .refe-footer-recapiti { display: flex; flex-direction: column; gap: 20px; align-items: flex-end; text-align: right; }
 footer .refe-footer-recapiti > * { margin-block: 0 !important; }
 footer .refe-footer-recapiti > h3 { width: 100%; }

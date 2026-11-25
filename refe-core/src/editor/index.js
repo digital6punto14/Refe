@@ -139,13 +139,21 @@ function PannelloPagina() {
 	const tipo = useSelect( ( select ) => select( editorStore ).getCurrentPostType(), [] );
 	const supporta = useSelect( ( select ) => !! select( coreStore ).getPostType( tipo )?.supports?.[ 'custom-fields' ], [ tipo ] );
 	const [ meta, setMeta ] = useEntityProp( 'postType', tipo, 'meta' );
+	const servizio = tipo === 'page' && meta && 'refe_servizio' in meta;
 	if ( ! [ 'page', 'post', 'refe_case' ].includes( tipo ) || ! supporta || ! meta ) {
 		return null;
 	}
 	return (
+		<>
+		{ servizio && (
+			<PluginDocumentSettingPanel name="refe-servizio" title={ __( 'Motori di ricerca e agenti AI', 'refe-core' ) }>
+				<ToggleControl __nextHasNoMarginBottom label={ __( 'Questa pagina descrive un servizio', 'refe-core' ) } help={ __( 'La pagina entra nei dati strutturati come servizio e nell’elenco dei servizi per gli agenti AI.', 'refe-core' ) } checked={ !! meta.refe_servizio } onChange={ ( v ) => setMeta( { ...meta, refe_servizio: v } ) } />
+			</PluginDocumentSettingPanel>
+		) }
 		<PluginDocumentSettingPanel name="refe-animazioni" title={ __( 'Animazioni della pagina', 'refe-core' ) }>
 			<CampiAnimazione valore={ meta.refe_animazione || {} } predefinito={ __( 'Come il sito', 'refe-core' ) } onChange={ ( v ) => setMeta( { ...meta, refe_animazione: senzaVuoti( v ) || {} } ) } />
 		</PluginDocumentSettingPanel>
+		</>
 	);
 }
 registerPlugin( 'refe-pagina', { render: PannelloPagina } );

@@ -47,7 +47,7 @@ final class Contenuti {
 				'rest_base'    => 'case-studies',
 				'menu_icon'    => 'dashicons-portfolio',
 				'menu_position' => 21,
-				'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail', 'page-attributes', 'revisions', 'custom-fields' ),
+				'supports'     => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author', 'page-attributes', 'revisions', 'custom-fields' ),
 				'taxonomies'   => array( self::TIPO_CLIENTE, self::SOLUZIONE ),
 				'rewrite'      => array(
 					'slug'       => 'case-studies',

@@ -94,8 +94,9 @@ function refe_contenuti_importa( bool $riscrivi = true ): array {
 			'ping_status'    => 'closed',
 			'page_template'  => in_array( $chiave, array( 'privacy', 'cookie' ), true ) ? 'pagina-indice' : 'default',
 		);
+		$dati['meta_input'] = refe_contenuti_seo_meta( $chiave );
 		if ( isset( $d[3] ) ) {
-			$dati['meta_input'] = array( '_yoast_wpseo_bctitle' => $d[3] );
+			$dati['meta_input']['_yoast_wpseo_bctitle'] = $d[3];
 		}
 		if ( 'privacy' === $chiave && ! refe_contenuti_trova( 'pagina:privacy', 'page' ) ) {
 			// La bozza che WordPress crea da solo.
@@ -140,6 +141,9 @@ function refe_contenuti_importa( bool $riscrivi = true ): array {
 	}
 	refe_contenuti_news( $mappa );
 
+	if ( $primo || $riscrivi ) {
+		refe_contenuti_llms( $pagine );
+	}
 	update_option( 'refe_contenuti_importati', time(), false );
 	flush_rewrite_rules();
 	return Refe_Contenuti_Stato::$esito;
@@ -166,10 +170,5 @@ function refe_contenuti_opzioni(): void {
 	if ( $icona ) {
 		update_option( 'site_icon', $icona );
 	}
-	// Percorso «Home / Pagina», come nella demo.
-	if ( defined( 'WPSEO_VERSION' ) ) {
-		$titoli                    = (array) get_option( 'wpseo_titles', array() );
-		$titoli['breadcrumbs-sep'] = '/';
-		update_option( 'wpseo_titles', $titoli );
-	}
+	refe_contenuti_yoast();
 }

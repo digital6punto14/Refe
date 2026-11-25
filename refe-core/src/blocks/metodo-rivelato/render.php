@@ -16,7 +16,7 @@ $refe_immagine = $attributes['immagine'];
 	<div class="refe-metodo__perno">
 		<div class="refe-metodo__scena">
 			<?php if ( ! empty( $refe_immagine['url'] ) ) : ?>
-				<span class="refe-metodo__sigillo"><img src="<?php echo esc_url( $refe_immagine['url'] ); ?>" alt="<?php echo esc_attr( $refe_immagine['alt'] ?? '' ); ?>" width="150" height="150" data-refe-nitido></span>
+				<span class="refe-metodo__sigillo"><img src="<?php echo esc_url( $refe_immagine['url'] ); ?>" alt="<?php echo esc_attr( $refe_immagine['alt'] ?? '' ); ?>" width="150" height="150" loading="lazy" data-refe-nitido></span>
 			<?php endif; ?>
 			<div class="refe-metodo__testo" data-refe-ingresso="manuale"><?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- Blocchi già resi. ?></div>
 		</div>

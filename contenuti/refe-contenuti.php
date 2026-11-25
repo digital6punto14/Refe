@@ -19,6 +19,7 @@ define( 'REFE_CONTENUTI_DIR', plugin_dir_path( __FILE__ ) );
 require_once REFE_CONTENUTI_DIR . 'includes/funzioni.php';
 require_once REFE_CONTENUTI_DIR . 'includes/schede.php';
 require_once REFE_CONTENUTI_DIR . 'includes/modulo.php';
+require_once REFE_CONTENUTI_DIR . 'includes/seo.php';
 require_once REFE_CONTENUTI_DIR . 'includes/importa.php';
 
 /**

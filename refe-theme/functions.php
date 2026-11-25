@@ -53,6 +53,30 @@ function refe_theme_enqueue(): void {
 add_action( 'wp_enqueue_scripts', 'refe_theme_enqueue' );
 
 /**
+ * Il font del testo si carica subito.
+ *
+ * @param array $risorse Risorse.
+ */
+function refe_theme_preload( array $risorse ): array {
+	$risorse[] = array(
+		'href'        => get_theme_file_uri( 'assets/fonts/dm-sans.woff2' ),
+		'as'          => 'font',
+		'type'        => 'font/woff2',
+		'crossorigin' => 'anonymous',
+	);
+	return $risorse;
+}
+add_filter( 'wp_preload_resources', 'refe_theme_preload' );
+
+/**
+ * Senza JavaScript le schede a tab mostrano tutti i pannelli.
+ */
+function refe_theme_senza_js(): void {
+	echo '<noscript><style>.wp-block-tab-panel[hidden]{display:block!important}.wp-block-tab-list{display:none!important}</style></noscript>' . "\n";
+}
+add_action( 'wp_head', 'refe_theme_senza_js' );
+
+/**
  * Categoria dei pattern del progetto.
  */
 function refe_theme_categorie_pattern(): void {

@@ -22,7 +22,7 @@ if ( ! $refe_altro ) {
 }
 ?>
 <a <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-successivo' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?> href="<?php echo esc_url( get_permalink( $refe_altro ) ); ?>">
-	<?php echo get_the_post_thumbnail( $refe_altro, 'full', array( 'alt' => '', 'sizes' => '100vw' ) ); ?>
+	<?php echo get_the_post_thumbnail( $refe_altro, 'full', array( 'alt' => '', 'sizes' => '100vw', 'loading' => 'lazy', 'fetchpriority' => 'auto' ) ); ?>
 	<span><?php echo esc_html( wp_strip_all_tags( $attributes['testo'] ) ); ?></span>
 	<strong><?php echo esc_html( get_the_title( $refe_altro ) ); ?> <?php echo Plugin::freccia(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></strong>
 	<span class="refe-successivo__testo"><?php echo esc_html( $refe_altro->post_excerpt ); ?></span>
