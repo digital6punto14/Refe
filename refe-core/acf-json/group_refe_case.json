@@ -21,8 +21,8 @@
             "key": "field_refe_case_link_url",
             "label": "Link esterno",
             "name": "link_url",
-            "type": "url",
-            "instructions": "",
+            "type": "text",
+            "instructions": "Indirizzo completo, per esempio https://… oppure mailto:info@refe.net. Se è vuoto, il pulsante del racconto non si vede.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {

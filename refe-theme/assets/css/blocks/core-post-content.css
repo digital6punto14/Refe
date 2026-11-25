@@ -1,7 +1,12 @@
 /* Testi lunghi: articoli e pagine legali. */
-.refe-prosa .wp-block-post-content > * + * { margin-block-start: 14px; }
-.refe-prosa .wp-block-post-content > h2 { margin-block: 44px 14px; color: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember))); font-size: clamp(25px, 2.3vw, 34px); font-weight: 700; }
-.refe-prosa .wp-block-post-content > h2:first-child { margin-block-start: 0; }
+.refe-prosa .wp-block-post-content.wp-block-post-content > * + * { margin-block-start: 14px; }
+.refe-prosa .wp-block-post-content.wp-block-post-content > .wp-block-list { margin-block: 14px 0; padding-left: 1.2em; }
+.refe-prosa .wp-block-post-content.wp-block-post-content > :is(h2, h3) { margin-block: 44px 14px; color: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember))); font-size: clamp(25px, 2.3vw, 34px); font-weight: 700; }
+.refe-prosa .wp-block-post-content.wp-block-post-content > h2:first-child { margin-block-start: 0; }
 .refe-prosa :is(p, li) { font-size: 18px; line-height: 1.6; overflow-wrap: break-word; }
 .refe-prosa a:not(.wp-block-button__link) { color: var(--wp--preset--color--bright-blue); text-underline-offset: 3px; overflow-wrap: anywhere; }
 .refe-prosa small { font-size: 14px; opacity: .75; }
+.refe-prosa .wp-block-table { margin-block: 18px; overflow-x: auto; }
+.refe-prosa .wp-block-table table { min-width: 560px; border-collapse: collapse; }
+.refe-prosa .wp-block-table :is(th, td) { padding: 10px; border: 0; border-bottom: 1px solid #00308733; font-size: 15px; line-height: 1.4; text-align: left; vertical-align: top; }
+.refe-prosa .wp-block-table :is(th, td) { word-break: normal; overflow-wrap: normal; }

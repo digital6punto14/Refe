@@ -1,0 +1,94 @@
+{
+  "media": {
+    "illustrazione-perform.svg": 900001,
+    "icona-perform-refe.svg": 900002,
+    "illustrazione-openreport.svg": 900003,
+    "icona-openreport-refe.svg": 900004,
+    "icona-metodo-governance.svg": 900005,
+    "icona-metodo-performance.svg": 900006,
+    "icona-metodo-formazione.svg": 900007,
+    "icona-metodo-reporting.svg": 900008,
+    "icona-metodo-dialogo.svg": 900009,
+    "refe-logo-loop.webm": 900010,
+    "sticky-metodo.svg": 900011,
+    "sfondo-piattaforme.webp": 900012,
+    "sfondo-relazioni.webp": 900013,
+    "foto-dialogo.webp": 900014,
+    "foto-scala.webp": 900015,
+    "foto-paesaggio.webp": 900016,
+    "anniversario-20.svg": 900017,
+    "foto-lavagna.webp": 900018,
+    "att-programmazione.svg": 900019,
+    "att-accountability.svg": 900020,
+    "att-collaborazione.svg": 900021,
+    "att-formazione.svg": 900022,
+    "att-analisi.svg": 900023,
+    "att-governance.svg": 900024,
+    "att-persone.svg": 900025,
+    "att-strategia.svg": 900026,
+    "foto-sopralluogo.webp": 900027,
+    "foto-sala.webp": 900028,
+    "foto-laptop.webp": 900029,
+    "foto-movimento.webp": 900030,
+    "case-puglia.webp": 900031,
+    "case-parma.webp": 900032,
+    "case-brianzacque.webp": 900033
+  },
+  "blocchi": {
+    "piattaforme": 910001,
+    "rendersi-conto": 910002,
+    "per-rendere-conto": 910003
+  },
+  "titoli": {
+    "piattaforme": "Le due piattaforme",
+    "rendersi-conto": "Attività: Rendersi conto",
+    "per-rendere-conto": "Attività: Per rendere conto"
+  },
+  "modulo": 920001,
+  "persone": [
+    930001,
+    930002,
+    930003,
+    930004
+  ],
+  "case": {
+    "regione-puglia": 940001,
+    "comune-di-parma": 940002,
+    "brianzacque": 940003,
+    "fincons-group": 940004
+  },
+  "articoli": [
+    {
+      "slug": "la-relazione-e-il-vero-motore-del-cambiamento",
+      "titolo": "La relazione è il vero motore del cambiamento",
+      "riassunto": "Cristiana Rogate nel podcast “Che razza di umani”: sostenibilità, ecosistemi e valore condiviso.",
+      "data": "2026-07-08",
+      "categoria": "Media",
+      "immagine": "foto-dialogo.webp",
+      "fuoco": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "slug": "quarant-anni-di-valore-un-impact-book",
+      "titolo": "Quarant’anni di valore, un Impact Book",
+      "riassunto": "Il percorso con Fondazione Lombardia per l’Ambiente per dare forma al valore generato nel tempo.",
+      "data": "2026-06-03",
+      "categoria": "Progetti",
+      "immagine": "foto-paesaggio.webp",
+      "fuoco": [
+        0.5,
+        0.6
+      ]
+    },
+    {
+      "slug": "la-sostenibilita-entra-nelle-scelte",
+      "titolo": "La sostenibilità entra nelle scelte",
+      "riassunto": "Governance, management e comunicazione: il contributo di Cristiana Rogate ai Quaderni dell’Università di Torino.",
+      "data": "2026-01-14",
+      "categoria": "Pubblicazioni",
+      "immagine": "foto-scala.webp"
+    }
+  ]
+}

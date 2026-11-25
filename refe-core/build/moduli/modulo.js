@@ -1,0 +1,1 @@
+document.addEventListener("wpcf7invalid",t=>{setTimeout(()=>t.target.querySelector(".wpcf7-not-valid:is(input, select, textarea), .wpcf7-not-valid input")?.focus(),50)});

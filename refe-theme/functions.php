@@ -27,7 +27,7 @@ function refe_theme_stili_blocchi(): void {
 	$dir = get_theme_file_path( 'assets/css/blocks' );
 	foreach ( (array) glob( $dir . '/*.css' ) as $file ) {
 		$nome   = basename( $file, '.css' );
-		$blocco = str_starts_with( $nome, 'yoast-seo-' ) ? 'yoast-seo/' . substr( $nome, 10 ) : preg_replace( '/-/', '/', $nome, 1 );
+		$blocco = preg_replace( '/^(core|refe|yoast-seo|contact-form-7)-/', '$1/', $nome );
 		wp_enqueue_block_style(
 			$blocco,
 			array(

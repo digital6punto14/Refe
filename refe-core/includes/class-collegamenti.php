@@ -19,6 +19,7 @@ final class Collegamenti {
 	 */
 	public static function avvia(): void {
 		add_action( 'init', array( self::class, 'registra' ) );
+		add_filter( 'render_block_core/button', array( self::class, 'pulsante' ), 10, 2 );
 	}
 
 	/**
@@ -137,6 +138,30 @@ final class Collegamenti {
 		}
 		$valore = Campi::testo( $nome, $id );
 		return 'url' === $attributo ? esc_url( $valore ) : esc_html( $valore );
+	}
+
+	/**
+	 * Un pulsante legato a un campo vuoto non si mostra; un indirizzo email non apre una scheda nuova.
+	 *
+	 * @param string $html   HTML.
+	 * @param array  $blocco Blocco.
+	 */
+	public static function pulsante( string $html, array $blocco ): string {
+		if ( 'refe/campo' !== ( $blocco['attrs']['metadata']['bindings']['url']['source'] ?? '' ) ) {
+			return $html;
+		}
+		$tag = new \WP_HTML_Tag_Processor( $html );
+		if ( ! $tag->next_tag( 'A' ) ) {
+			return $html;
+		}
+		$url = (string) $tag->get_attribute( 'href' );
+		if ( '' === trim( $url ) || '#' === $url ) {
+			return '';
+		}
+		if ( str_starts_with( $url, 'mailto:' ) ) {
+			$tag->remove_attribute( 'target' );
+		}
+		return $tag->get_updated_html();
 	}
 
 	/**

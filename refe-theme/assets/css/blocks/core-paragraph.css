@@ -4,3 +4,4 @@
 .is-style-freccia::after { content: ""; flex: none; width: 20px; height: 16px; background: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember))); mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(135deg); }
 .is-style-schema-solar-ember .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--white); }
 .is-style-schema-white-blue .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--bright-blue); }
+.refe-fonte { opacity: .75; }

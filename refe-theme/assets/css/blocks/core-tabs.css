@@ -1,7 +1,8 @@
-.wp-block-tab-list { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 5px; margin-bottom: 28px; border: 1px solid var(--refe-vetro-bordo); border-radius: 12px; background: var(--refe-vetro); box-shadow: var(--refe-vetro-ombra); -webkit-backdrop-filter: blur(32px) saturate(140%); backdrop-filter: blur(32px) saturate(140%); }
+.wp-block-tabs .wp-block-tab-list { display: inline-flex; flex-wrap: wrap; gap: 4px; padding: 5px; margin-block: 0 28px; border: 1px solid var(--refe-vetro-bordo); border-radius: 12px; background: var(--refe-vetro); box-shadow: var(--refe-vetro-ombra); -webkit-backdrop-filter: blur(32px) saturate(140%); backdrop-filter: blur(32px) saturate(140%); }
 .wp-block-tab-list [role="tab"] { min-height: 44px; padding: 8px 20px; border: 0; border-radius: 8px; background: transparent; color: var(--wp--preset--color--midnight-moon); font: 500 16px/1.2 var(--wp--preset--font-family--dm-sans); text-transform: none; cursor: pointer; opacity: 1; transition: background-color .25s, color .25s; }
 .wp-block-tab-list [role="tab"]:hover { background: #ffffff80; }
 .wp-block-tab-list [role="tab"][aria-selected="true"] { background: var(--wp--preset--color--bright-blue); color: var(--wp--preset--color--white); }
 .wp-block-tab-panel:not([hidden]) { animation: refe-entra .5s var(--wp--custom--ritmo) both; }
 @keyframes refe-entra { from { opacity: 0; transform: translateY(14px); } }
-@media (max-width: 800px) { .wp-block-tab-list { display: flex; } .wp-block-tab-list [role="tab"] { flex: 1 1 auto; padding-inline: 12px; } }
+@media (max-width: 800px) { .wp-block-tabs .wp-block-tab-list { display: flex; } .wp-block-tab-list [role="tab"] { flex: 1 1 auto; padding-inline: 12px; } }
+.wp-block-tabs .wp-block-tab-panels { margin-block-start: 0; }

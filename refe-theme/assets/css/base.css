@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 112px; scrollbar-width: none
 html::-webkit-scrollbar { display: none; }
 body { overflow-x: clip; }
 /* La testata è fissa e sta sopra la prima sezione; le sezioni si toccano. */
-.wp-site-blocks > * + *, main.wp-block-group > * + *, .wp-block-post-content.is-layout-flow > * + *, .wp-block-post-content.is-layout-constrained > * + *, .wp-block-post-content > * + .alignfull { margin-block-start: 0; }
+.wp-site-blocks > * + *, main.wp-block-group > * + *, main > .wp-block-post-content > * + *, .wp-block-post-content > * + .alignfull { margin-block-start: 0; }
 :where(h1, h2, h3, h4) { text-wrap: balance; overflow-wrap: break-word; }
 :where(p, li) { text-wrap: pretty; }
 /* Parola chiave del titolo: corsivo nell'editor, arancione e in grassetto sul sito. */
