@@ -1,25 +1,25 @@
 .wp-block-refe-testimonianze.refe-voci { display: grid; grid-template-columns: minmax(270px, .75fr) minmax(0, 1.9fr); gap: var(--refe-spazio, clamp(28px, 4vw, 64px)); align-items: center; }
-.refe-voci__testo { display: flex; flex-direction: column; justify-content: center; align-self: stretch; padding-right: clamp(20px, 3vw, 48px); border-right: 1px solid #ffffff55; }
+.refe-voci__testo { display: flex; flex-direction: column; justify-content: center; align-self: stretch; padding-right: clamp(20px, 3vw, 48px); border-right: 1px solid color-mix(in srgb, currentColor 33%, transparent); }
 .refe-voci__testo > * { margin-block: 0 !important; }
 .refe-voci__testo > h2 { font-size: clamp(30px, 3vw, 48px); line-height: 1.08; letter-spacing: -.035em; }
-.refe-voci__testo > h2 em { font-weight: inherit; color: #ff7b35; }
+.refe-voci__testo > h2 em { font-weight: inherit; color: var(--refe-evidenza, var(--refe-evidenza-schema, #ff7b35)); }
 .refe-voci__testo > .wp-block-buttons { margin-top: 24px !important; }
 .refe-voci__slider { position: relative; min-width: 0; }
 .refe-voci__finestra { overflow: hidden; mask-image: linear-gradient(90deg, #000 88%, transparent); }
 .refe-voci__pista { --passo: clamp(28px, 3.5vw, 56px); display: flex; column-gap: var(--passo); margin: 0; padding: 20px 0 0; list-style: none; }
 .refe-voce { flex: 0 0 calc((100% - var(--passo)) / 2); min-width: 0; }
 .refe-voce figure { display: flex; flex-direction: column; height: 100%; margin: 0; }
-.refe-voce blockquote { position: relative; margin: 0; padding: 58px 46px 50px; border: 0; color: #fff; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; text-align: center; }
-.refe-voce blockquote::before, .refe-voce blockquote::after { position: absolute; color: var(--wp--preset--color--solar-ember-bright, #ff6a1d); font-size: clamp(84px, 7vw, 118px); font-weight: 700; line-height: 1; }
+.refe-voce blockquote { position: relative; margin: 0; padding: 58px 46px 50px; border: 0; color: inherit; font-size: clamp(16px, 1.25vw, 19px); line-height: 1.5; text-align: center; }
+.refe-voce blockquote::before, .refe-voce blockquote::after { position: absolute; color: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember-bright, #ff6a1d))); font-size: clamp(84px, 7vw, 118px); font-weight: 700; line-height: 1; }
 .refe-voce blockquote::before { content: "“"; left: 0; top: -14px; }
 .refe-voce blockquote::after { content: "”"; right: 0; bottom: -52px; }
 .refe-voce figcaption { margin-top: auto; padding-top: 18px; text-align: center; }
-.refe-voce figcaption strong { display: block; color: var(--wp--preset--color--solar-ember-bright, #ff6a1d); font-size: clamp(19px, 1.6vw, 24px); font-weight: 600; }
-.refe-voce figcaption span { display: block; margin-top: 4px; color: #fff; font-size: 16px; }
+.refe-voce figcaption strong { display: block; color: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember-bright, #ff6a1d))); font-size: clamp(19px, 1.6vw, 24px); font-weight: 600; }
+.refe-voce figcaption span { display: block; margin-top: 4px; font-size: 16px; }
 .refe-voci__pausa { margin: 22px 0 0 auto; }
 @media (max-width: 950px) {
 	.wp-block-refe-testimonianze.refe-voci { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-	.refe-voci__testo { padding: 0 0 24px; border-right: 0; border-bottom: 1px solid #ffffff55; }
+	.refe-voci__testo { padding: 0 0 24px; border-right: 0; border-bottom: 1px solid color-mix(in srgb, currentColor 33%, transparent); }
 }
 @media (max-width: 800px) { .refe-voci__testo > .wp-block-buttons { margin-top: 16px !important; } }
 @media (max-width: 700px) {

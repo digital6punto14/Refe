@@ -7,7 +7,7 @@ import { registerPlugin } from '@wordpress/plugins';
 import { PluginDocumentSettingPanel, store as editorStore } from '@wordpress/editor';
 import { useEntityProp, store as coreStore } from '@wordpress/core-data';
 import { useSelect } from '@wordpress/data';
-import { InspectorControls, RichTextToolbarButton } from '@wordpress/block-editor';
+import { InspectorControls, PanelColorSettings, RichTextToolbarButton, useSettings } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, TextControl, ToggleControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
@@ -38,6 +38,56 @@ function PannelloSfondo( { attributes: { className }, setAttributes } ) {
 		</InspectorControls>
 	);
 }
+
+/* ---------- Colore in evidenza ---------- */
+const EVIDENZA = [ 'core/group', 'core/columns', 'core/column', 'core/cover', 'core/heading', 'core/post-title', 'core/paragraph' ];
+const conEvidenza = ( nome ) => EVIDENZA.includes( nome ) || ( nome || '' ).startsWith( 'refe/' );
+const cssColore = ( v ) => v?.replace( /^var:preset\|color\|(.+)$/, 'var(--wp--preset--color--$1)' );
+function PannelloEvidenza( { name, attributes: { refeEvidenza }, setAttributes } ) {
+	const [ tema = [], personali = [] ] = useSettings( 'color.palette.theme', 'color.palette.custom' );
+	const colori = [ ...( tema || [] ), ...( personali || [] ) ];
+	const slug = refeEvidenza?.match( /^var:preset\|color\|(.+)$/ )?.[ 1 ];
+	const valore = slug ? colori.find( ( c ) => c.slug === slug )?.color : refeEvidenza;
+	return (
+		<InspectorControls group="styles">
+			<PanelColorSettings
+				title={ __( 'Colore in evidenza', 'refe-core' ) }
+				initialOpen={ !! refeEvidenza || name.startsWith( 'refe/' ) }
+				colorSettings={ [
+					{
+						label: __( 'Parole chiave e dettagli', 'refe-core' ),
+						value: valore,
+						colors: colori,
+						onChange: ( c ) => {
+							const trovato = colori.find( ( x ) => x.color === c );
+							setAttributes( { refeEvidenza: c ? ( trovato ? 'var:preset|color|' + trovato.slug : c ) : undefined } );
+						},
+					},
+				] }
+			>
+				<p style={ { color: '#757575', fontSize: 12, margin: '8px 0 0' } }>{ __( 'Parole evidenziate, virgolette, nomi, frecce e pallini. Vuoto: si adatta allo schema della sezione.', 'refe-core' ) }</p>
+			</PanelColorSettings>
+		</InspectorControls>
+	);
+}
+addFilter( 'blocks.registerBlockType', 'refe/evidenza', ( settings, name ) =>
+	conEvidenza( name ) ? { ...settings, attributes: { ...settings.attributes, refeEvidenza: { type: 'string' } } } : settings
+);
+addFilter(
+	'editor.BlockListBlock',
+	'refe/evidenza',
+	createHigherOrderComponent(
+		( BlockListBlock ) => ( props ) => {
+			const colore = conEvidenza( props.name ) && cssColore( props.attributes?.refeEvidenza );
+			if ( ! colore ) {
+				return <BlockListBlock { ...props } />;
+			}
+			const wrapperProps = { ...props.wrapperProps, style: { ...props.wrapperProps?.style, '--refe-evidenza': colore } };
+			return <BlockListBlock { ...props } wrapperProps={ wrapperProps } />;
+		},
+		'conEvidenzaRefe'
+	)
+);
 
 /* ---------- Animazione d'ingresso ---------- */
 const ANIMATI = [ 'core/heading', 'core/paragraph', 'core/post-title', 'core/post-excerpt', 'core/query-title' ];
@@ -70,6 +120,7 @@ addFilter(
 			<>
 				<BlockEdit { ...props } />
 				{ props.isSelected && SFONDI.includes( props.name ) && <PannelloSfondo { ...props } /> }
+				{ props.isSelected && conEvidenza( props.name ) && <PannelloEvidenza { ...props } /> }
 				{ props.isSelected && ANIMATI.includes( props.name ) && (
 					<InspectorControls>
 						<PanelBody title={ __( 'Animazione', 'refe-core' ) } initialOpen={ false }>

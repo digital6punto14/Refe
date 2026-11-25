@@ -12,7 +12,7 @@
 .refe-persona__info strong, .refe-persona__retro strong { font-size: 22px; line-height: 1.15; }
 .refe-persona__info span { font-size: 15px; line-height: 1.4; }
 .refe-persona__vai { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 16px; line-height: 1.3; text-transform: uppercase; }
-.refe-persona__vai .refe-freccia { width: 26px; height: 21px; color: var(--wp--preset--color--solar-ember, #f95700); }
+.refe-persona__vai .refe-freccia { width: 26px; height: 21px; color: var(--refe-evidenza, var(--wp--preset--color--solar-ember, #f95700)); }
 .refe-persona__retro { justify-content: space-between; gap: 12px; transform: rotateY(180deg); background: var(--wp--preset--color--midnight-moon, #021e42); }
 .refe-persona__retro > :not(video, iframe) { position: relative; align-self: flex-start; }
 .refe-persona__retro :is(video, iframe) { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; border: 0; object-fit: contain; }

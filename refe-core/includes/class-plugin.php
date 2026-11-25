@@ -18,7 +18,7 @@ final class Plugin {
 	 * Avvia le aree.
 	 */
 	public static function avvia(): void {
-		foreach ( array( Contenuti::class, Campi::class, Impostazioni::class, Theme_Bridge::class, Collegamenti::class, Blocchi::class, Menu::class, Stili::class, Animazioni::class, Globali::class, Indice::class, Video::class, Editor::class, Segnaposto::class ) as $area ) {
+		foreach ( array( Contenuti::class, Campi::class, Impostazioni::class, Theme_Bridge::class, Collegamenti::class, Blocchi::class, Menu::class, Stili::class, Animazioni::class, Evidenza::class, Globali::class, Indice::class, Video::class, Editor::class, Segnaposto::class ) as $area ) {
 			$area::avvia();
 		}
 	}

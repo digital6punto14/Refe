@@ -359,6 +359,10 @@ return array(
 				'margin' => true,
 				'padding' => true,
 				'blockGap' => true
+			),
+			'color' => array(
+				'text' => true,
+				'background' => false
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -499,6 +503,10 @@ return array(
 				'margin' => true,
 				'padding' => true,
 				'blockGap' => true
+			),
+			'color' => array(
+				'text' => true,
+				'background' => false
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -806,6 +814,10 @@ return array(
 				'margin' => true,
 				'padding' => true,
 				'blockGap' => true
+			),
+			'color' => array(
+				'text' => true,
+				'background' => false
 			)
 		),
 		'editorScript' => 'file:./index.js',
@@ -847,6 +859,10 @@ return array(
 				'margin' => true,
 				'padding' => true,
 				'blockGap' => true
+			),
+			'color' => array(
+				'text' => true,
+				'background' => false
 			)
 		),
 		'editorScript' => 'file:./index.js',
