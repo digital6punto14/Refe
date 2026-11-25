@@ -13,6 +13,11 @@ defined( 'ABSPATH' ) || exit;
 $refe_simbolo = $attributes['simbolo']['url'] ?? REFE_CORE_URL . 'assets/img/simbolo.svg';
 $refe_venti   = $attributes['venti']['url'] ?? REFE_CORE_URL . 'assets/img/anniversario-20.svg';
 $refe_video   = $attributes['video']['url'] ?? '';
+// La copertina occupa il primo schermo: le immagini che seguono si caricano solo quando servono.
+if ( function_exists( 'wp_high_priority_element_flag' ) ) {
+	wp_high_priority_element_flag( false );
+	wp_increase_content_media_count( 10 );
+}
 $refe_sfondo  = $attributes['sfondo'] && \Refe\Core\Impostazioni::valore( 'animazioni', 'copertina' );
 ?>
 <section <?php echo get_block_wrapper_attributes( array( 'class' => 'refe-copertina' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
