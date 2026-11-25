@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Refe — contenuti demo
  * Description:       Importatore dei contenuti della demo. Si lancia una volta da Strumenti e poi si elimina: i contenuti restano.
- * Version:           0.6.0
+ * Version:           1.0.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Author:            6.14
