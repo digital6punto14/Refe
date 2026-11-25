@@ -23,8 +23,8 @@
 .is-style-schema-solar-ember .wpcf7 input[type="submit"] { background: var(--wp--preset--color--white); color: var(--wp--preset--color--solar-ember); }
 .is-style-schema-solar-ember .wpcf7 input[type="submit"]:hover { background: var(--wp--preset--color--solar-ember-pale); color: var(--wp--preset--color--solar-ember-dark); }
 .wpcf7 input[type="submit"]:disabled { opacity: .6; cursor: default; }
-.wpcf7 form .wpcf7-response-output { margin: 18px 0 0; padding: 0; border: 0 !important; font-size: 15px; }
-.wpcf7 form.sent .wpcf7-response-output { padding: 14px 18px; border-radius: 10px; background: var(--wp--preset--color--midnight-moon); color: var(--wp--preset--color--white); font-size: 16px; }
-.wpcf7 form.invalid .wpcf7-response-output { display: none; }
+.wpcf7.wpcf7 form.wpcf7-form .wpcf7-response-output { margin: 18px 0 0; padding: 0; border: 0 !important; font-size: 15px; }
+.wpcf7.wpcf7 form.wpcf7-form.sent .wpcf7-response-output { padding: 14px 18px; border-radius: 10px; background: var(--wp--preset--color--midnight-moon); color: var(--wp--preset--color--white); font-size: 16px; }
+.wpcf7.wpcf7 form.wpcf7-form.invalid .wpcf7-response-output { display: none; }
 .wpcf7-spinner { vertical-align: middle; }
 @media (max-width: 800px) { .refe-campi { grid-template-columns: minmax(0, 1fr); } }
