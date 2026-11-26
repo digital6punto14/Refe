@@ -68,3 +68,6 @@
   .is-style-testata .is-style-mattonella { width: min(100%, 310px); }
   .is-style-testata .is-style-mattonella img { width: 100% !important; max-width: none; }
 }
+/* Alcune versioni di Safari, con container-type, danno larghezza zero alle colonne «larghezza minima»
+   (min(270px, 100%)) e le schede si schiacciano. Il sito non usa container query su queste griglie. */
+.wp-block-group.is-layout-grid { container-type: normal; }
