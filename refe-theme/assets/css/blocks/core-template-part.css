@@ -7,7 +7,8 @@ header.wp-block-template-part :is(a, button, nav, summary) { pointer-events: aut
 header .wp-block-site-logo img, header .refe-logo img { width: 154px; height: auto; display: block; transition: filter .25s; }
 header .wp-block-buttons .wp-block-button__link { transition: background-color .25s, color .25s; }
 header.su-arancione :is(.wp-block-site-logo img, .refe-logo img) { filter: brightness(0) invert(1); }
-header.su-arancione .wp-block-button:not(.refe-pannello *) .wp-block-button__link { background: var(--wp--preset--color--white); color: var(--wp--preset--color--solar-ember); }
+/* Sulle fasce arancioni il pulsante diventa bianco, anche se nel Site Editor gli è stato dato un colore. */
+header.su-arancione .wp-block-button:not(.refe-pannello *) .wp-block-button__link { background: var(--wp--preset--color--white) !important; color: var(--wp--preset--color--solar-ember) !important; }
 @media (max-width: 800px) {
   header.wp-block-template-part > .wp-block-group { padding: 14px 16px; gap: 8px; min-height: 92px; }
   header .wp-block-site-logo img, header .refe-logo img { width: 116px; }
