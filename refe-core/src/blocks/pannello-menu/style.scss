@@ -54,6 +54,8 @@
 
 @media (min-width: 800.02px) {
 	.refe-pannello__fascia { position: absolute; z-index: 5; top: calc(100% + 17px); right: calc(var(--nav-side, 20px) * -1 - 1px); left: calc(var(--nav-side, 20px) * -1 - 1px); min-height: 232px; display: grid; align-items: center; }
+	/* Ponte invisibile sopra la tendina: scendendo dalla voce il mouse non esce mai dal menu. */
+	.refe-pannello__fascia::before { content: ""; position: absolute; top: -28px; right: 0; left: 0; height: 28px; }
 }
 
 @media (min-width: 800.02px) and (max-width: 1019px) {

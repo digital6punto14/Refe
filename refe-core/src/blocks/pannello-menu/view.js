@@ -1,4 +1,6 @@
-/* Pannelli del menu: si aprono al passaggio del mouse o con la tastiera, uno alla volta. */
+/* Pannelli del menu: si aprono al passaggio del mouse o con la tastiera, uno alla volta.
+   Uscendo con il mouse restano aperti ancora un momento, così si raggiungono anche in diagonale. */
+const ATTESA_CHIUSURA = 450;
 const voci = [ ...document.querySelectorAll( '.refe-pannello > details' ) ];
 const mouse = matchMedia( '(hover: hover) and (pointer: fine)' );
 const largo = () => innerWidth > 800;
@@ -36,12 +38,13 @@ voci.forEach( ( voce ) => {
 		}
 	} );
 	nav?.addEventListener( 'pointerenter', () => clearTimeout( chiudi ) );
+	voce.addEventListener( 'pointerenter', () => clearTimeout( chiudi ) );
 	nav?.addEventListener( 'pointerleave', () => {
 		clearTimeout( apri );
 		if ( ! largo() || nav.contains( document.activeElement ) ) {
 			return;
 		}
-		chiudi = setTimeout( () => chiudiTutti(), 180 );
+		chiudi = setTimeout( () => chiudiTutti(), ATTESA_CHIUSURA );
 	} );
 } );
 document.addEventListener( 'click', ( e ) => {
