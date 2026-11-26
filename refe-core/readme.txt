@@ -4,7 +4,7 @@ Tags: blocks, custom post types, settings
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,9 @@ This plugin holds everything that is not appearance: case studies, testimonials,
 The `build` folder is produced with @wordpress/scripts. The source code is in the private project repository.
 
 == Changelog ==
+
+= 1.0.1 =
+* Menu panels more opaque.
 
 = 1.0.0 =
 * First delivery.
