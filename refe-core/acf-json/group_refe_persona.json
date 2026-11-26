@@ -17,25 +17,11 @@
             }
         },
         {
-            "key": "field_refe_persona_video_link",
-            "label": "Video: link",
-            "name": "video_link",
-            "type": "url",
-            "instructions": "YouTube o Vimeo. In alternativa scegli un file qui sotto.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
-            "key": "field_refe_persona_video_file",
-            "label": "Video: file",
-            "name": "video_file",
-            "type": "file",
-            "instructions": "",
+            "key": "field_refe_persona_immagine_retro",
+            "label": "Immagine sul retro",
+            "name": "immagine_retro",
+            "type": "image",
+            "instructions": "Compare quando si gira la card, sopra la presentazione.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -45,7 +31,26 @@
             },
             "return_format": "id",
             "library": "all",
-            "mime_types": "mp4,webm"
+            "preview_size": "medium",
+            "mime_types": "jpg,jpeg,png,webp,avif"
+        },
+        {
+            "key": "field_refe_persona_presentazione",
+            "label": "Presentazione",
+            "name": "presentazione",
+            "type": "textarea",
+            "instructions": "Il testo che compare quando si gira la card: qualche riga. Senza immagine e senza presentazione la card non si gira.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 6,
+            "new_lines": "",
+            "placeholder": "",
+            "maxlength": ""
         },
         {
             "key": "field_refe_persona_segnaposto",
@@ -85,5 +90,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 1,
-    "modified": 1795478400
+    "modified": 1795651200
 }

@@ -28,14 +28,11 @@ $refe_attributi = get_block_wrapper_attributes(
 		<?php
 		$refe_nome  = get_the_title( $refe_p );
 		$refe_seg   = Segnaposto::e( $refe_p->ID );
-		$refe_link  = Video::lettore( Campi::testo( 'video_link', $refe_p->ID ) );
-		$refe_file  = (int) Campi::leggi( 'video_file', $refe_p->ID );
-		$refe_file  = $refe_file ? (string) wp_get_attachment_url( $refe_file ) : '';
-		$refe_video = $refe_link ? $refe_link : $refe_file;
-		$refe_prova = ! $refe_video && $refe_seg ? (string) ( $attributes['video']['url'] ?? '' ) : '';
-		$refe_gira  = $refe_video || $refe_seg;
+		$refe_testo = Campi::testo( 'presentazione', $refe_p->ID );
+		$refe_foto  = (int) Campi::leggi( 'immagine_retro', $refe_p->ID );
+		$refe_gira  = '' !== $refe_testo || $refe_foto || $refe_seg;
 		/* translators: %s: nome della persona. */
-		$refe_guarda = sprintf( __( 'Guarda il video di %s', 'refe-core' ), $refe_nome );
+		$refe_guarda = sprintf( __( 'Leggi la presentazione di %s', 'refe-core' ), $refe_nome );
 		?>
 		<li class="refe-persona">
 			<div class="refe-persona__interno">
@@ -60,14 +57,20 @@ $refe_attributi = get_block_wrapper_attributes(
 					<?php endif; ?>
 				</div>
 				<?php if ( $refe_gira ) : ?>
-					<div class="refe-persona__faccia refe-persona__retro" aria-hidden="true" inert<?php echo $refe_video ? ' data-video="' . esc_url( $refe_video ) . '"' : ''; ?> data-titolo="<?php echo esc_attr( $refe_guarda ); ?>">
-						<?php if ( $refe_prova ) : ?>
-							<video class="refe-persona__prova" src="<?php echo esc_url( $refe_prova ); ?>" width="1140" height="920" muted loop playsinline preload="none" tabindex="-1"></video>
-						<?php endif; ?>
-						<?php if ( ! $refe_video ) : ?>
-							<span class="refe-persona__nota"><?php esc_html_e( 'Video da inserire', 'refe-core' ); ?></span>
+					<div class="refe-persona__faccia refe-persona__retro" aria-hidden="true" inert>
+						<?php if ( $refe_foto ) : ?>
+							<figure class="refe-persona__immagine"><?php echo wp_get_attachment_image( $refe_foto, 'large', false, array( 'sizes' => '(max-width: 800px) 100vw, 25vw' ) ); ?></figure>
+						<?php elseif ( $refe_seg ) : ?>
+							<figure class="refe-persona__immagine"><span class="refe-persona__nota"><?php esc_html_e( 'Immagine da inserire', 'refe-core' ); ?></span></figure>
 						<?php endif; ?>
 						<strong><?php echo esc_html( $refe_nome ); ?></strong>
+						<div class="refe-persona__testo">
+							<?php if ( '' !== $refe_testo ) : ?>
+								<?php echo wp_kses_post( wpautop( esc_html( $refe_testo ) ) ); ?>
+							<?php elseif ( $refe_seg ) : ?>
+								<p><span class="refe-persona__nota"><?php esc_html_e( 'Presentazione da inserire', 'refe-core' ); ?></span></p>
+							<?php endif; ?>
+						</div>
 					</div>
 				<?php endif; ?>
 			</div>

@@ -5,7 +5,7 @@
   "title": "Persone",
   "category": "refe",
   "icon": "groups",
-  "description": "Schede delle persone; girano e mostrano il video.",
+  "description": "Schede delle persone; girano e mostrano la presentazione.",
   "textdomain": "refe-core",
   "attributes": {
     "scelte": {
@@ -18,11 +18,7 @@
     },
     "testoLink": {
       "type": "string",
-      "default": "Guarda il video"
-    },
-    "video": {
-      "type": "object",
-      "default": {}
+      "default": "Scopri di più"
     }
   },
   "supports": {

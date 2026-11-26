@@ -593,7 +593,7 @@ return array(
 		'title' => 'Persone',
 		'category' => 'refe',
 		'icon' => 'groups',
-		'description' => 'Schede delle persone; girano e mostrano il video.',
+		'description' => 'Schede delle persone; girano e mostrano la presentazione.',
 		'textdomain' => 'refe-core',
 		'attributes' => array(
 			'scelte' => array(
@@ -608,13 +608,7 @@ return array(
 			),
 			'testoLink' => array(
 				'type' => 'string',
-				'default' => 'Guarda il video'
-			),
-			'video' => array(
-				'type' => 'object',
-				'default' => array(
-					
-				)
+				'default' => 'Scopri di più'
 			)
 		),
 		'supports' => array(

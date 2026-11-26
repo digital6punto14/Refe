@@ -1,14 +1,10 @@
-/* Al clic la scheda gira e parte il video. Una sola girata alla volta. */
-import { ridotto } from '../../comune/movimento';
-import { lettore } from '../../comune/video';
-
+/* Al clic la scheda gira e mostra immagine e presentazione. Una sola girata alla volta. */
 const schede = [ ...document.querySelectorAll( '.refe-persona' ) ].filter( ( s ) => s.querySelector( '.refe-persona__gira' ) );
 
 function gira( scheda, si ) {
 	const pulsante = scheda.querySelector( '.refe-persona__gira' );
 	const fronte = scheda.querySelector( '.refe-persona__fronte' );
 	const retro = scheda.querySelector( '.refe-persona__retro' );
-	const prova = retro.querySelector( '.refe-persona__prova' );
 	scheda.classList.toggle( 'is-girata', si );
 	pulsante.setAttribute( 'aria-pressed', String( si ) );
 	pulsante.setAttribute( 'aria-label', si ? pulsante.dataset.chiudi : pulsante.dataset.apri );
@@ -16,20 +12,6 @@ function gira( scheda, si ) {
 	fronte.inert = si;
 	retro.setAttribute( 'aria-hidden', String( ! si ) );
 	retro.inert = ! si;
-	if ( prova ) {
-		if ( si && ! ridotto.matches ) {
-			prova.play().catch( () => {} );
-		} else {
-			prova.pause();
-		}
-	}
-	if ( retro.dataset.video ) {
-		retro.querySelector( 'iframe, video' )?.remove();
-		scheda.classList.toggle( 'con-lettore', si );
-		if ( si ) {
-			retro.prepend( lettore( retro.dataset.video, retro.dataset.titolo ) );
-		}
-	}
 }
 
 schede.forEach( ( scheda ) => {

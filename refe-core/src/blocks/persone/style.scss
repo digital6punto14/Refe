@@ -13,17 +13,24 @@
 .refe-persona__info span { font-size: 15px; line-height: 1.4; }
 .refe-persona__vai { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 16px; line-height: 1.3; text-transform: uppercase; }
 .refe-persona__vai .refe-freccia { width: 26px; height: 21px; color: var(--refe-evidenza, var(--wp--preset--color--solar-ember, #f95700)); }
-.refe-persona__retro { justify-content: space-between; gap: 12px; transform: rotateY(180deg); background: var(--wp--preset--color--midnight-moon, #021e42); }
-.refe-persona__retro > :not(video, iframe) { position: relative; align-self: flex-start; }
-.refe-persona__retro :is(video, iframe) { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; border: 0; object-fit: contain; }
-.refe-persona__prova { box-sizing: border-box; padding: 18%; }
+/* Il retro ha l’altezza del fronte: un testo lungo scorre, non allunga la card. */
+.refe-persona__retro { position: absolute; inset: 0; justify-content: flex-start; gap: 12px; transform: rotateY(180deg); background: var(--wp--preset--color--midnight-moon, #021e42); }
+.refe-persona__immagine { flex: 0 0 auto; display: grid; place-items: center; height: 42%; min-height: 150px; margin: -16px -16px 4px; overflow: hidden; background: #ffffff0f; }
+.refe-persona__immagine img { width: 100%; height: 100%; object-fit: cover; }
+.refe-persona__testo { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding-right: 4px; font-size: 15px; line-height: 1.5; color: var(--wp--preset--color--white-blue, #dce3ec); scrollbar-width: thin; }
+.refe-persona__testo p { margin: 0 0 10px; }
+.refe-persona__testo p:last-child { margin-bottom: 0; }
 .refe-persona__gira { position: absolute; z-index: 2; inset: 0; width: 100%; padding: 0; border: 0; border-radius: 16px; background: transparent; cursor: pointer; }
-/* Con il video aperto il pulsante resta solo in alto, per lasciare liberi i comandi del lettore. */
-.refe-persona.con-lettore .refe-persona__gira { inset: 0 0 auto auto; display: grid; place-items: center; width: 44px; height: 44px; margin: 8px; border-radius: 50%; background: #021e42b3; color: #fff; }
-.refe-persona.con-lettore .refe-persona__gira::before { content: "✕"; }
+/* Con la card girata il pulsante resta solo in alto: così il testo lungo si può scorrere. */
+.refe-persona.is-girata .refe-persona__gira { inset: 0 0 auto auto; display: grid; place-items: center; width: 44px; height: 44px; margin: 8px; border-radius: 50%; background: #021e42b3; color: #fff; }
+.refe-persona.is-girata .refe-persona__gira::before { content: "✕"; }
 @media (hover: hover) and (pointer: fine) {
 	.refe-persona__info { opacity: 0; transform: translateY(10px); transition: opacity .4s ease-out, transform .4s ease-out; }
 	.refe-persona:is(:hover, :has(:focus-visible)) .refe-persona__info { opacity: 1; transform: none; }
 }
 .editor-styles-wrapper .refe-persona__info { opacity: 1; transform: none; }
+/* Safari mostra in trasparenza le parti del fronte che hanno un livello proprio: a metà giro il fronte si nasconde. */
+.refe-persona__fronte { transition: visibility 0s .4s; }
+.refe-persona.is-girata .refe-persona__fronte { visibility: hidden; }
+.refe-persona:not(.is-girata) .refe-persona__retro { visibility: hidden; transition: visibility 0s .4s; }
 @media (prefers-reduced-motion: reduce) { .refe-persona__interno { transition: none; } }
