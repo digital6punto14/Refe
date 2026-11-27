@@ -18,7 +18,7 @@
 @media (max-width: 510px) { :root { --refe-margine: 20px; } }
 html { scroll-behavior: smooth; scroll-padding-top: 112px; scrollbar-width: none; background: var(--wp--preset--color--midnight-moon); }
 html::-webkit-scrollbar { display: none; }
-body { overflow-x: clip; }
+body { overflow-x: hidden; overflow-x: clip; }
 /* La testata è fissa e sta sopra la prima sezione; le sezioni si toccano. */
 .wp-site-blocks > * + *, main.wp-block-group > * + *, main > .wp-block-post-content > * + *, .wp-block-post-content > * + .alignfull { margin-block-start: 0; }
 :where(h1, h2, h3, h4) { text-wrap: balance; overflow-wrap: break-word; }
@@ -26,6 +26,7 @@ body { overflow-x: clip; }
 /* Parola chiave del titolo: corsivo nell'editor, arancione e in grassetto sul sito. */
 :is(h1, h2, h3, h4) em { font-style: normal; font-weight: 700; color: var(--refe-evidenza, var(--refe-chiave)); }
 :is(a, button, summary, input, select, textarea, [tabindex]):focus-visible { outline: 3px solid var(--wp--preset--color--solar-ember); outline-offset: 4px; }
+@supports not selector(:focus-visible) { :is(a, button, summary, input, select, textarea, [tabindex]):focus { outline: 3px solid var(--wp--preset--color--solar-ember); outline-offset: 4px; } }
 .skip-link.screen-reader-text:focus { z-index: 2000; background: var(--wp--preset--color--white); color: var(--wp--preset--color--midnight-moon); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

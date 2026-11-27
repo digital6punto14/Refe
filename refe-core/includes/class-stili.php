@@ -20,6 +20,7 @@ final class Stili {
 	public static function avvia(): void {
 		add_action( 'init', array( self::class, 'registra' ) );
 		add_filter( 'render_block_core/group', array( self::class, 'carica' ), 10, 2 );
+		add_filter( 'render_block_core/group', array( self::class, 'contatori' ), 10, 2 );
 	}
 
 	/**
@@ -36,6 +37,23 @@ final class Stili {
 		wp_register_style( 'refe-scorrimento', REFE_CORE_URL . 'assets/css/scorrimento.css', array(), Blocchi::versione( 'assets/css/scorrimento.css' ) );
 		wp_style_add_data( 'refe-scorrimento', 'path', REFE_CORE_DIR . 'assets/css/scorrimento.css' );
 		add_editor_style( REFE_CORE_URL . 'assets/css/scorrimento.css' );
+	}
+
+	/**
+	 * Gruppo che contiene contatori: una classe, così il CSS non ha bisogno di :has() (browser del 2021).
+	 *
+	 * @param string $html   HTML.
+	 * @param array  $blocco Blocco.
+	 */
+	public static function contatori( string $html, array $blocco ): string {
+		if ( ! in_array( 'refe/contatore', array_column( $blocco['innerBlocks'] ?? array(), 'blockName' ), true ) ) {
+			return $html;
+		}
+		$tag = new \WP_HTML_Tag_Processor( $html );
+		if ( $tag->next_tag() ) {
+			$tag->add_class( 'refe-contatori' );
+		}
+		return $tag->get_updated_html();
 	}
 
 	/**

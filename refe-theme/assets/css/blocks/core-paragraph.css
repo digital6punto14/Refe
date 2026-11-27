@@ -1,7 +1,7 @@
-.is-style-nota { width: fit-content; opacity: .8; }
-.is-style-etichetta { width: fit-content; }
+.is-style-nota { width: -moz-fit-content; width: fit-content; opacity: .8; }
+.is-style-etichetta { width: -moz-fit-content; width: fit-content; }
 .is-style-freccia { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-.is-style-freccia::after { content: ""; flex: none; width: 20px; height: 16px; background: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember))); mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(135deg); }
+.is-style-freccia::after { content: ""; flex: none; width: 20px; height: 16px; background: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember))); -webkit-mask: var(--refe-freccia) center / contain no-repeat; mask: var(--refe-freccia) center / contain no-repeat; transform: rotate(135deg); }
 .is-style-schema-solar-ember .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--white); }
 .is-style-schema-white-blue .is-style-passo:not(.has-text-color) { color: var(--wp--preset--color--bright-blue); }
 .refe-fonte { opacity: .75; }

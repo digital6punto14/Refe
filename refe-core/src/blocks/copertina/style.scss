@@ -43,3 +43,4 @@
 }
 @media (max-width: 510px) { .refe-copertina__testo .wp-block-heading.has-copertina-font-size { font-size: clamp(37px, 9.6vw, 46px) !important; } }
 @media (prefers-reduced-motion: reduce) { .refe-copertina__scena::after { opacity: 0; } }
+@supports not (aspect-ratio: 1 / 1) { .refe-copertina__posto { height: calc(clamp(240px, 27vw, 440px) / 1.25); } }

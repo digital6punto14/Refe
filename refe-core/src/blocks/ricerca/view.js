@@ -5,24 +5,37 @@ let attesa = 0;
 let richiesta = null;
 const testo = ( html ) => new DOMParser().parseFromString( html, 'text/html' ).body.textContent;
 const finestra = () => getElement().ref.closest( '.refe-ricerca' ).querySelector( 'dialog' );
+const sblocca = () => document.documentElement.style.removeProperty( 'overflow' );
+function chiudi( d ) {
+	if ( typeof d.close === 'function' ) {
+		d.close();
+	} else {
+		d.removeAttribute( 'open' );
+		sblocca();
+	}
+}
 
 const { state } = store( 'refe/ricerca', {
 	actions: {
 		apri() {
 			const d = finestra();
-			d.showModal();
+			if ( typeof d.showModal === 'function' ) {
+				d.showModal();
+			} else {
+				d.setAttribute( 'open', '' );
+			}
 			document.documentElement.style.overflow = 'hidden';
 			d.querySelector( 'input' ).focus();
 		},
 		chiudi() {
-			finestra().close();
+			chiudi( finestra() );
 		},
 		chiuso() {
-			document.documentElement.style.removeProperty( 'overflow' );
+			sblocca();
 		},
 		fuori( e ) {
 			if ( e.target === e.currentTarget ) {
-				e.currentTarget.close();
+				chiudi( e.currentTarget );
 			}
 		},
 		scrivi( e ) {

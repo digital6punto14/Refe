@@ -7,5 +7,6 @@
 .refe-successivo .refe-freccia { width: 34px; height: 27px; }
 @media (hover: hover) and (pointer: fine) {
 	.refe-successivo__testo { opacity: 0; transform: translateY(10px); transition: opacity .4s ease-out, transform .4s ease-out; }
-	.refe-successivo:is(:hover, :focus-visible) .refe-successivo__testo { opacity: 1; transform: none; }
+	.refe-successivo:hover .refe-successivo__testo { opacity: 1; transform: none; }
+	.refe-successivo:focus-visible .refe-successivo__testo { opacity: 1; transform: none; }
 }

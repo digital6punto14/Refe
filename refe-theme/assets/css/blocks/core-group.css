@@ -8,7 +8,7 @@
 .refe-bagliore[class*="is-style-schema-"]:not(.is-style-schema-solar-ember) { background-image: var(--refe-grana), radial-gradient(ellipse at 85% 20%, #1559d680, transparent 55%), radial-gradient(ellipse at 10% 90%, #021e4299, transparent 60%); background-size: 180px 180px, auto, auto; }
 .refe-bagliore.is-style-schema-white-blue[class*="is-style-schema-"] { background-image: var(--refe-grana-chiara), radial-gradient(ellipse at 88% 18%, #9ec1ff8c, transparent 48%), radial-gradient(ellipse at 6% 86%, #c8d9efcc, transparent 52%); }
 .refe-senza-grana.refe-bagliore[class*="is-style-schema-"]:not(.is-style-schema-solar-ember) { background-image: radial-gradient(ellipse at 85% 20%, #1559d680, transparent 55%), radial-gradient(ellipse at 10% 90%, #021e4299, transparent 60%); background-size: auto; }
-.refe-filigrana[class*="is-style-schema-"]::before { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: currentColor; opacity: .06; mask: var(--refe-simbolo) 105% 50% / auto 150% no-repeat; }
+.refe-filigrana[class*="is-style-schema-"]::before { content: ""; position: absolute; z-index: -1; inset: 0; pointer-events: none; background: currentColor; opacity: .06; -webkit-mask: var(--refe-simbolo) 105% 50% / auto 150% no-repeat; mask: var(--refe-simbolo) 105% 50% / auto 150% no-repeat; }
 .refe-filigrana.is-style-schema-white-blue::before { background: var(--wp--preset--color--bright-blue); opacity: .05; }
 .refe-filigrana.is-style-schema-solar-ember::before { background: var(--wp--preset--color--solar-ember-dark); opacity: .22; }
 /* Immagine di sfondo scelta nell'editor: vince sulla grana. */
@@ -35,10 +35,10 @@
 .is-style-scheda:has(:is(h2, h3, h4) a):active { translate: 0 0; }
 
 /* Testata di pagina */
-.is-style-testata { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: min(720px, 82svh); padding-top: 150px; padding-bottom: clamp(48px, 6vw, 84px); overflow: clip; background-image: var(--refe-grana), radial-gradient(ellipse at 80% 0%, #0051d7a6, transparent 58%), linear-gradient(180deg, var(--wp--preset--color--bright-blue), var(--wp--preset--color--midnight-moon)); background-size: 180px 180px, auto, auto; }
+.is-style-testata { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: min(720px, 82vh); min-height: min(720px, 82svh); padding-top: 150px; padding-bottom: clamp(48px, 6vw, 84px); overflow: hidden; overflow: clip; background-image: var(--refe-grana), radial-gradient(ellipse at 80% 0%, #0051d7a6, transparent 58%), linear-gradient(180deg, var(--wp--preset--color--bright-blue), var(--wp--preset--color--midnight-moon)); background-size: 180px 180px, auto, auto; }
 .wp-block-group.is-style-testata { padding-left: var(--refe-margine); padding-right: var(--refe-margine); }
 .is-style-testata > * { width: 100%; }
-.is-style-testata.refe-filigrana::before { content: ""; position: absolute; z-index: -1; inset: 0; width: auto; background: var(--wp--preset--color--white); opacity: .05; mask: var(--refe-simbolo) 104% 40% / auto 135% no-repeat; }
+.is-style-testata.refe-filigrana::before { content: ""; position: absolute; z-index: -1; inset: 0; width: auto; background: var(--wp--preset--color--white); opacity: .05; -webkit-mask: var(--refe-simbolo) 104% 40% / auto 135% no-repeat; mask: var(--refe-simbolo) 104% 40% / auto 135% no-repeat; }
 .is-style-testata > .wp-block-columns { flex: 1; align-items: stretch !important; }
 .is-style-testata > .wp-block-columns > .wp-block-column:first-child { align-self: flex-end; }
 .is-style-testata > .wp-block-columns > .wp-block-column:last-child { display: grid; align-self: stretch; align-items: center; }
@@ -47,7 +47,7 @@
 .is-style-testata h1.has-grande-font-size { max-width: 20ch; }
 .is-style-testata h1 + :is(p, .wp-block-post-excerpt) { max-width: 58ch; margin-top: 20px; line-height: 1.5; color: var(--wp--preset--color--white-blue); }
 @media (max-width: 800px) {
-  .is-style-testata { min-height: min(640px, 84svh); padding-top: 130px; }
+  .is-style-testata { min-height: min(640px, 84vh); min-height: min(640px, 84svh); padding-top: 130px; }
   .is-style-testata > .wp-block-columns { flex: none; }
   .is-style-testata > .wp-block-columns > .wp-block-column:last-child:not(:has(.is-style-a-filo)) { order: -1; }
   .is-style-testata > .wp-block-columns img { max-width: 180px; }

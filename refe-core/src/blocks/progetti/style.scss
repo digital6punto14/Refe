@@ -9,10 +9,12 @@
 .refe-progetto__testo { font-size: 15px; line-height: 1.4; }
 .refe-progetto__vai { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; margin-top: auto; font-size: 16px; line-height: 1.3; text-transform: uppercase; }
 .refe-progetto__vai .refe-freccia { width: 26px; height: 21px; color: var(--refe-evidenza, var(--wp--preset--color--solar-ember, #f95700)); }
-.refe-progetto:is(:hover, :focus-visible) > img { scale: 1.04; }
+.refe-progetto:hover > img { scale: 1.04; }
+.refe-progetto:focus-visible > img { scale: 1.04; }
 @media (hover: hover) and (pointer: fine) {
 	.refe-progetto__info { opacity: 0; transform: translateY(10px); transition: opacity .4s ease-out, transform .4s ease-out; }
-	.refe-progetto:is(:hover, :focus-visible) .refe-progetto__info { opacity: 1; transform: none; }
+	.refe-progetto:hover .refe-progetto__info { opacity: 1; transform: none; }
+	.refe-progetto:focus-visible .refe-progetto__info { opacity: 1; transform: none; }
 }
 /* Carosello: fino al bordo destro, con dissolvenza. */
 .refe-progetti.is-carosello { margin-right: calc(var(--refe-margine, 0px) * -1) !important; max-width: none; }

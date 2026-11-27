@@ -10,7 +10,7 @@
 .refe-pannelli.is-vivo .refe-tappa { grid-area: 1 / 1; align-self: center; opacity: 0; }
 .refe-pannelli.is-vivo .refe-tappa:not(.is-attivo) { pointer-events: none; visibility: hidden; }
 .refe-pannelli__punti { display: none; }
-.refe-pannelli.is-vivo .refe-pannelli__punti { position: absolute; right: calc(var(--refe-margine, 40px) * -.55); top: 50%; display: grid; gap: 10px; translate: 0 -50%; }
+.refe-pannelli.is-vivo .refe-pannelli__punti { position: absolute; right: calc(var(--refe-margine, 40px) * -.55); top: 50%; display: grid; gap: 10px; transform: translateY(-50%); }
 .refe-pannelli__punti span { width: 8px; height: 8px; box-sizing: border-box; border: 1px solid color-mix(in srgb, currentColor 65%, transparent); border-radius: 50%; }
 .refe-pannelli__punti span.is-acceso { border-color: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember, #f95700))); background: var(--refe-evidenza, var(--refe-evidenza-schema, var(--wp--preset--color--solar-ember, #f95700))); }
 /* Linea della Storia: si disegna con lo scorrimento. */

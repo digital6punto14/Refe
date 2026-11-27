@@ -23,9 +23,12 @@
 .is-striscia.is-pronta .refe-news__pista { animation: refe-news var(--giro, 28s) linear infinite; animation-play-state: paused; }
 .is-striscia.is-pronta.is-visibile .refe-news__pista { animation-play-state: running; }
 @media (hover: hover) and (pointer: fine) { .is-striscia.is-pronta .refe-news__finestra:hover .refe-news__pista { animation-play-state: paused; } }
-:is(.is-striscia.is-ferma, .is-striscia:has(.refe-news__finestra :focus-visible), .refe-fermo .is-striscia) .refe-news__finestra { overflow-x: auto; }
-:is(.is-striscia.is-ferma, .is-striscia:has(.refe-news__finestra :focus-visible), .refe-fermo .is-striscia) .refe-news__pista { animation: none; }
-:is(.is-striscia.is-ferma, .is-striscia:has(.refe-news__finestra :focus-visible), .refe-fermo .is-striscia) .refe-news__elenco[aria-hidden] { display: none; }
+:is(.is-striscia.is-ferma, .refe-fermo .is-striscia) .refe-news__finestra { overflow-x: auto; }
+.is-striscia:focus-within .refe-news__finestra { overflow-x: auto; }
+:is(.is-striscia.is-ferma, .refe-fermo .is-striscia) .refe-news__pista { animation: none; }
+.is-striscia:focus-within .refe-news__pista { animation: none; }
+:is(.is-striscia.is-ferma, .refe-fermo .is-striscia) .refe-news__elenco[aria-hidden] { display: none; }
+.is-striscia:focus-within .refe-news__elenco[aria-hidden] { display: none; }
 @keyframes refe-news { to { transform: translateX(-50%); } }
 @media (max-width: 1024px) { .is-griglia .refe-news__elenco { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 800px) {

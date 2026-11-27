@@ -16,3 +16,6 @@ header.su-arancione .refe-ricerca__apri { filter: brightness(0) invert(1); }
 	.refe-ricerca { display: none; }
 	.refe-ricerca__finestra { padding: 55px 28px 32px; border-radius: 24px; }
 }
+/* Safari prima della 15.4 non conosce <dialog>: chiuso non si vede, aperto sta al centro. */
+.refe-ricerca__finestra:not([open]) { display: none; }
+@supports not selector(dialog::backdrop) { .refe-ricerca__finestra[open] { position: fixed; z-index: 2000; top: 50%; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 0 0 100vmax rgb(2 30 66 / .55); } }
